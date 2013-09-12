@@ -1,0 +1,12 @@
+{
+	"name": "silverstripe-ux/cwp-theme-flat",
+	"description": "CWP Flat Theme",
+	"type": "silverstripe-theme",
+	"require": {
+		"composer/installers": "*",
+		"silverstripe/cms": ">=3.0",
+		"silverstripe/framework": ">=3.0",
+		"cwp/cwp": "dev-master",
+		"silverstripe-themes/module_bootstrap": "dev-ssexpress"
+	}
+}

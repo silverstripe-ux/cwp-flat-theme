@@ -1,0 +1,223 @@
+/*
+* 	Customisations to the styling for main top navigation of sidemenu
+*/
+
+// Make toggle click area bigger for fingers
+	.navbar-nav > li > a.has-children {
+		padding-right: 30px;
+		.caret {
+			margin-left: 0;
+		}
+	}
+	.navbar  span.showChildren { 
+		position: absolute;
+		padding-top: 10px;
+		margin-top: 5px;
+		width: 30px;
+		height: 40px;
+		top: 0;
+		right: 0;
+		text-align: center;
+		&:hover {
+			.caret {
+				border-top-color: $link-hover-color;
+				border-bottom-color: $link-hover-color;
+			}
+		}
+	}
+	// inverts the caret when the dropdown is open
+	.navbar {
+		.dropdown.open {
+			.showChildren {
+				.caret {
+					border-top: 0 dotted;
+					border-bottom: 4px solid $link-color;
+				}
+			}
+		}
+	}
+	// added a background color to menu toggle icon
+	.navbar-default .navbar-toggle {
+		.icon-bar {
+			background-color: $navbar-default-link-color;
+		}
+		&:hover {
+			.icon-bar {
+				background-color: $navbar-default-link-hover-color;
+			}
+		}
+	}
+
+	// Tablets / Desktop / Large Desktop
+	@media (min-width: $screen-sm) {
+
+	}
+
+	// Tablets & small desktops only
+	@media (max-width: $screen-sm-max) {	
+		.navbar {			// Smaller screen sizes 
+			span.showChildren { 
+				margin-top: 0;
+				right: 23px;
+			}
+			.dropdown.open {
+				.dropdown-menu {
+					width: 100%;
+					border: none;
+					float: none;
+					box-shadow: none;
+					position: relative;
+				}
+			}
+		}
+		.navbar-responsive-collapse {
+			margin-top: 50px;
+			.navbar-nav {
+				margin-top: 0;
+			}
+		}
+	}
+
+
+/*
+// Not tested below here
+
+#IE6 .nav-collapse {
+	height: 100%;
+}
+
+.navbar{
+	.showChildren{
+		display:inline-block;
+    	width:20px;
+    	height:20px;
+    	text-align:center; 
+    	#IE7 &{
+			margin-top:-3px;
+		} 
+    }
+    .nav > li > a{
+		&:focus {
+			background-color: $navbar-link-hover-bg;
+			color: $navbar-link-hover-color;
+			text-decoration: none;
+		}
+	}
+	.nav {
+		// Dropnav arrow adjustment 
+		.hasLink {
+			padding-right: 32px;
+		}
+		.hasLinkArrow {
+			width: 16px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			padding-right: 6px;
+		}
+		#IE6 & {
+			width: 70%;
+			li {
+				display: block;
+				float: left;
+				overflow: visible;
+				a {
+					display: block;
+					padding: 9px 10px 9px 11px;
+
+					.showChildren {
+						text-align: top;
+						height: 15px;
+						overflow: hidden;
+
+						.caret {
+							margin: 6px 0 0 0;
+							color: $gray-darker;
+						}
+					}
+				}
+				a,
+				a.dropdown-toggle {
+					color: #C7C7C7;
+					text-decoration: none;
+					background-color: transparent;
+				}
+				&.active a {
+					background-color: #222;
+					color: white;
+				}
+			}
+			.dropdown-menu {
+				li {
+					display: inline;
+					float: none;
+
+					a {
+						color: #333;
+						background-color: transparent;
+					}
+				}
+			}
+		}
+	}
+}
+*/
+
+
+/* Side navigation */
+.sidebar-nav {
+	margin-bottom: 20px;
+	padding-top:    10px;
+	padding-bottom: 10px;
+	background-color: $navbar-default-bg;
+	border-radius: $border-radius-base;
+	
+    .nav {	
+    	.nav li { /* third level */
+	    	a {
+	    		padding-left: 30px;
+	    		padding-right: 30px;
+	    	}
+			.nav li {  /* fourth level */
+		    	a {
+		    		padding-left: 45px;
+		    		padding-right: 45px;
+		    	}
+				.nav li { /* fifth level */
+			    	a {
+			    		padding-left: 60px;
+			    		padding-right: 60px;
+			    	}
+					.nav li { /* sixth level */
+				    	a {
+				    		padding-left: 75px;
+				    		padding-right: 75px;
+				    	}
+				    }
+			    }
+		    }
+	    }
+	    a:hover, a.active {
+	    	background-color: $navbar-default-link-active-bg;
+	    }
+	    .active > a {
+	    	color: $navbar-default-link-active-color;
+	    }
+      
+    }
+    .active > a,
+	.active:hover > a,
+	.active:focus > a,
+	.section > a {
+		font-weight: bold;
+	}
+}
+
+
+@media (max-width: 979px) {
+	.no-js {
+		.navbar button.btn-navbar {
+			display: none;
+		}
+	}
+}

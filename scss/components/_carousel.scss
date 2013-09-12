@@ -1,0 +1,88 @@
+// Carousel accessibility adjustments
+// Bootstrap carousel-control links made into buttons
+.carousel {
+	margin-bottom: 20px;
+	a {
+		border: none;
+		background-color: transparent;
+		&.pause {
+			padding: 0;
+			color: #FFF;
+			font-family: Glyphicons Halflings;
+			font-weight: normal;
+			font-style: normal;
+			font-size: 20px;
+			position: absolute;
+			bottom: 15px;
+			right: 7.5%;
+			opacity: 0.75;
+			z-index: 15;
+			text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+			&:focus, &:hover {
+				opacity: 1;
+				text-decoration: none;
+			}
+		}
+	}
+	.carousel-control {
+		&:focus {
+			@extend .carousel-control:hover;
+			outline: none;
+		}
+		&.right {
+			.glyphicon {
+				left: auto;
+				right: 50%;
+			}
+		}
+	}
+	.carousel-inner {
+		a:hover img, a:focus img {
+			border: none;
+		}
+	}
+	
+	// indicator pips
+	.carousel-indicators {
+		position: absolute;
+		bottom: 15px;
+		left: 7.5%;
+		margin:0;
+		height: auto;
+		width: auto;
+		
+		.carousel-control {
+			display: inline-block;
+			width:  10px;
+			height: 10px;
+			top: 1px;
+			text-indent: -9999px;
+			border: 1px solid $carousel-indicator-border-color;
+			border-radius: 10px;
+			cursor: pointer;
+			background-color: transparent;
+			padding: 0;
+			position: relative;
+			margin-right: 7px;
+			color: #000;
+			text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+			z-index: 20;
+			&.active {
+				margin-right: 6px;
+				width:  12px;
+				height: 12px;
+				background-color: $carousel-indicator-active-bg;
+			}
+		}
+	}
+	
+	// background color added for added accessibilty
+	.carousel-caption {
+		background-color: #333;
+		background-color: rgba(0, 0, 0, 0.5);
+		padding-bottom: 50px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}

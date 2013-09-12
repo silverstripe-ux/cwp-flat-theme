@@ -1,0 +1,520 @@
+//* The general rule is that the styles from here will not be needed for the CMS editor.
+//* Styles related to content editing should go into typography.[s]css.
+
+//* *** ATTENTION SCSS DEVELOPER ***
+//*
+//* If you are working with SCSS, please do not import other top-level 
+//* stylesheets here such as typography.scss. We want to be able to generate 
+//* clean CSS for the third-party dev to work with directly, without duplication 
+//* of css in the generated files!
+
+
+// Import needed scss files. Bootstrap files require the bootstrap module in the themes directory
+@import "compass/support"; //import an external compass library for IE9 SVG gradient support 
+$experimental-support-for-svg: true; //for IE9 SVG gradient support 
+
+@import 'bootstrap_config/bootstrap.scss'; //Core bootstrap layout components
+@import 'components/forms'; //form specific scss
+@import 'components/navigation'; //navigation components
+@import 'components/carousel'; //carousel components
+@import 'components/mobile'; //mobile specific adjustments
+@import 'components/sitemap'; //sitemap specific scss
+@import 'components/results'; //search results specific scss
+
+
+
+
+/*****************************
+THEME LAYOUT
+******************************/
+
+/* todo: this is a workaround for responsive.css including padding: 20px coming from module_bootstrap */
+body {
+	padding: 0 !important;
+}
+
+/* Customise search field */	
+.search-form {
+	margin-top: 60px;
+}
+
+/*HEADER */
+header {
+	.brand {
+		#IE6 &,
+		#IE7 & {
+			width: 75%;
+		}
+		font-size: 3em;
+		font-weight:bold;
+		overflow:visible;
+		line-height:1em;
+		margin-top: 18px;
+		padding-bottom: 18px;
+		margin-bottom: 0;
+		a {
+			position: relative;
+			display: block;
+
+			img {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+			}
+
+			span {
+				float: left;
+				margin-top: 38px;
+				margin-left: 5px;
+			}
+
+			&:visited {
+				color: black;
+			}
+		}
+	}
+
+	#lang {
+		float: right;
+		margin-top: 10px;
+		#IE6 &,
+		#IE7 & {
+			width: 20%;
+			text-align: right;
+		}
+
+		li {
+			display: inline;
+			margin-left: 10px;
+			list-style: none;
+		}
+	}
+}
+
+/************************ MISC ****************************/
+
+.nonvisual-indicator { // Content oftenly used by people using screenreaders 
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px; padding: 0; border: 0;
+}
+
+
+.layout { //Needed to override typography styles
+
+	p.last-edited, p.printShare {
+		margin: 1.385em 0;	
+	}
+	p.printShare {
+		@extend .clearfix;
+
+		button {
+			background: none;
+			padding: 0;
+			border: 0;
+			font-size: 1em;
+			font-weight: normal;
+			line-height: 1.4em;
+			height: 1.4em;
+			vertical-align: baseline;
+			color: $link-color;
+
+			&:focus, &:hover {
+				text-decoration: underline;
+				color: $link-hover-color;
+			}
+
+			&:focus {
+				outline: 1px dotted black;
+			}
+		}
+
+		a, button {
+			padding: 2px 4px;
+			margin-left: 18px;
+
+			&:first-child {
+				border-left: none;
+				padding-left: 0;
+			}
+			&.pdf {
+				padding-left: 20px;
+				background-position: 2px 1px;
+			}
+			i {
+				margin-right: 5px;
+			}
+		}
+		a[href^="http://"],
+		a[href^="https"],
+		a.external {
+			background: none; // Share gets a unwanted external link icon
+		}
+	}
+}
+
+figure.featured-image {
+	float: right;
+}
+
+iframe {
+	border: 0;
+}
+
+footer {
+	.nav {
+		margin-top: 2px;
+	}
+	.footer-logo {
+		margin-bottom: 10px;
+		@include clearfix;
+	}
+	
+	/* Facebook and Twitter links */
+	.socialLinks {
+		margin-bottom: 20px;
+		a{
+			overflow:visible;
+			z-index:5;
+			position:relative;
+			margin-left: 20px;
+			display: inline;
+			i {
+				overflow:visible;
+				font-size:2em;
+				line-height:1em;
+				margin-right: 10px;
+				&:before {
+					margin-top: 10px;
+					vertical-align: middle;
+				}
+			}
+			&:hover i {
+				text-decoration: none;
+				&:before {
+					color: $link-hover-color;
+				}
+			}
+		}
+	}
+}
+
+
+
+/*Helper classes to customise icons*/
+.icon-dark{
+	color: $text-color;
+	&:visited{
+		color: $text-color;
+	}
+	&:hover{
+		color: $link-hover-color;
+		text-decoration: none;
+	}
+} 
+.icon-small{
+	font-size:1em;
+}
+
+
+/*Fixes for all media sizes*/
+@include mediaSizes;
+
+
+/*IE6 bootstrap fixes*/
+#IE6 {
+	.span12,
+	.span11,
+	.span10,
+	.span9,
+	.span8,
+	.span7,
+	.span6,
+	.span5,
+	.span4,
+	.span3,
+	.span2,
+	.span1 {
+		float: left;
+		margin-left: 20px;
+	}
+
+	.breadcrumb .active {
+		background: transparent;
+	}
+
+	.nav-list
+	{
+		li {
+			a {
+				display: block;
+			}
+
+			&.active {
+				background-color: transparent;
+				a {
+					background-color: #0464EA;
+					color: white;
+				}
+
+				li a {
+					background-color: transparent;
+					color: #0464EA;
+				}
+			}
+		}
+	}
+
+	.nav-pills li {
+		float: left;
+
+		&.current {
+			background-color: transparent;
+		}
+
+		a {
+			margin: 2px 2px 2px 0;
+			padding: 8px 12px;
+			line-height: 14px;
+			display: block;
+			text-decoration: none;
+
+			&.current {
+				background-color: #0464EA;
+    			color: white;
+			}
+		}
+	}
+}
+
+.navbar .btn-navbar {
+	float: left;
+	.nav-text {
+		float: left;
+		color: #c7c7c7;
+		margin-right: 7px;
+		text-shadow: none;
+	}
+
+	.nav-right {
+		float: right;
+		margin-top: 3px;
+	}
+
+	&:hover,
+	&:focus {
+		border-color: $gray;
+		background: $gray-dark;
+		.nav-text {
+			color: white;
+		}
+	}
+}
+
+/**
+ * Fix the responsive design's image-with-max-width-disappearing-on-float-right in IE8.
+ * http://www.456bereastreet.com/archive/201202/using_max-width_on_images_can_make_them_disappear_in_ie8/
+ */
+#IE8 .pull-right img {
+	max-width: none;
+}
+
+/**
+ * EventPage and NewsPage - update information
+ */
+.typography .update-information {
+	#IE6 & {
+		padding-bottom: 40px;
+	}
+
+	dl {
+		margin: 0;
+		padding: 0;
+	}
+
+	dd {
+		margin-top: 0.2em;
+		margin-bottom: 0.2em;
+	}
+
+	ul.update-tags {
+		overflow: auto;
+		margin: 8px 0;
+		
+		li {
+			float: left;
+			margin: 0 3px 3px 0;
+		}
+	}
+}
+
+/**
+ * EventHolder and NewsHolder.
+ */
+.typography .month-filter {
+	h6.year {
+		display: block;
+		float: left;
+		padding: 5px 0;
+		margin-right: 10px;
+	}
+	ol {
+		margin: 0;
+	}
+}
+
+.sidebar-nav h6,
+.sidebar-nav form {
+	padding: 0 14px;
+}
+
+.sidebar-form {
+	#IE6 & {
+		padding-bottom: 40px;
+	}
+	div.field {
+		.field-note {
+			clear: both;
+			font-style: italic;
+			font-size: 0.9em;
+			max-width: 170px;
+		}
+		input, select {
+			#IE6 & {
+				height: 20px;
+			}
+		}
+	}
+
+	.Actions {
+		#IE8 & {
+			filter: none;
+		}
+	}
+	.message {
+		margin: 10px;
+	}
+}
+
+.resultsList article header {
+	padding: 0;
+}
+
+/**
+ * Registry page
+ */
+.resultActions {
+	clear: both;
+
+	a {
+		display: block;
+	}
+}
+
+/**
+ * Blog module
+ */
+#BlogContent {
+	#Sidebar {
+		h3 {
+			color: #666666;
+			font-size: 11px;
+			text-transform: uppercase;
+			line-height: 18px;
+			margin: 0;
+			padding: 0 14px;
+		}
+
+		ul {
+			list-style: none outside none;
+			margin: 0;
+			padding-left: 15px;
+			padding-right: 15px;
+
+			li {
+				a {
+					padding: 3px 15px;
+					margin-left: -15px;
+					margin-right: -15px;
+					text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+					display: block;
+
+					&:hover {
+						background-color: #eee;
+						text-decoration: none;
+					}
+
+					&.active {
+						background-color: #0464EA;
+						color: white;
+						text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+					}
+				}
+			}
+		}
+
+		.tagcloud {
+			margin: 0 14px;
+			line-height: 1.8em;
+		}
+	}
+}
+
+/**
+ * Comments
+ */
+#comments-holder {
+	div.field {
+		clear: left;
+	}
+
+	.comments-holder {
+		li.comment {
+			list-style-type: none;
+			padding: 5px;
+			&.odd {
+				background: #eee;
+			}
+			&.unmoderated {
+				border: 2px dashed grey;
+			}
+
+			ul.action-links {
+				li {
+					list-style-type: none;
+					display: inline;
+					margin-right: 15px;
+					&:last-of-type {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/**
+ * Accessibility Skiplinks for screen readers, allow users to bypass 
+ * content recurring on every page to access the menu 
+ * or the content directly additionally for regular users by using tab
+ */
+
+.skipLinks a { 
+	padding: 5px 10px;
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+	
+	&:focus, &:active { 
+		display: inline-block; 
+		position:static; 
+		width:auto; 
+		height:auto; 
+	} 
+}
