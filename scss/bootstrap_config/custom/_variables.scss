@@ -18,10 +18,14 @@ $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
 // Brand colors
 // -------------------------
 
-$brand-primary:         #007FAD !default;					// CWP adjusted
-$brand-success:         #5cb85c !default;
+$brand-primary:         #807129 !default;
+
+$brand-secondary:       #f2f2f2;
+$brand-tertiary:        $gray-dark;
+					// CWP adjusted
+$brand-success:         #5f7c27 !default;
 $brand-warning:         #f0ad4e !default;
-$brand-danger:          #d9534f !default;
+$brand-danger:          #aa2b21 !default;
 $brand-info:            #5bc0de !default;
 
 // Scaffolding
@@ -33,18 +37,18 @@ $text-color:            $gray-dark !default;
 // Links
 // -------------------------
 
-$link-color:            #00739c !default;					// CWP adjusted
+$link-color:            #28616b !default;					// CWP adjusted
 $link-hover-color:      darken($link-color, 5%) !default;	// CWP adjusted
 
 // Typography
 // -------------------------
 
-$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:  'Source Sans Pro', sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
 
-$font-size-base:          14px !default;
+$font-size-base:          18px !default;
 $font-size-large:         ceil($font-size-base * 1.25) !default; // ~18px
 $font-size-small:         ceil($font-size-base * 0.85) !default; // ~12px
 
@@ -52,36 +56,37 @@ $line-height-base:        1.428571429 !default; // 20/14
 $line-height-computed:    floor($font-size-base * $line-height-base) !default; // ~20px
 
 $headings-font-family:    $font-family-base !default;
-$headings-font-weight:    500 !default;
+$headings-font-weight:    400 !default;
 $headings-line-height:    1.1 !default;
 
 // Iconography
 // -------------------------
 
 $icon-font-path:          "../fonts/" !default;
-$icon-font-name:          "glyphicons-halflings-regular" !default;
+$icon-font-name:          "glyphicons-halflings" !default;
 
 
 
 // Components
 // -------------------------
-// Based on 14px font-size and 1.428 line-height (~20px to start)
+$grid-y:                         5px !default;
+$grid-x:                         5px !default;
 
-$padding-base-vertical:          6px !default;
-$padding-base-horizontal:        12px !default;
+$padding-base-vertical:          5px !default;
+$padding-base-horizontal:        10px !default;
 
 $padding-large-vertical:         10px !default;
 $padding-large-horizontal:       16px !default;
 
-$padding-small-vertical:         5px !default;
-$padding-small-horizontal:       10px !default;
+$padding-small-vertical:         2px !default;
+$padding-small-horizontal:       6px !default;
 
 $line-height-large:              1.33 !default;
 $line-height-small:              1.5 !default;
 
-$border-radius-base:             4px !default;
-$border-radius-large:            6px !default;
-$border-radius-small:            3px !default;
+$border-radius-base:             0px !default;
+$border-radius-large:            4px !default;
+$border-radius-small:            2px !default;
 
 $component-active-bg:            $brand-primary !default;
 
@@ -96,24 +101,24 @@ $table-cell-padding:                 8px !default;
 $table-condensed-cell-padding:       5px !default;
 
 $table-bg:                           transparent !default; // overall background-color
-$table-bg-accent:                    #f5f5f5 !default; // for striping	// CWP adjusted
-$table-bg-hover:                     #f0f0f0 !default; // CWP adjusted
+$table-bg-accent:                    #f2f2f2 !default; // for striping	// CWP adjusted
+$table-bg-hover:                     #ebe8dd !default; // CWP adjusted
 $table-bg-active:                    $table-bg-hover !default;
 
-$table-border-color:                 #ddd !default; // table and cell border
+$table-border-color:                 #ccc !default; // table and cell border
 
 
 // Buttons
 // -------------------------
 
-$btn-font-weight:                normal !default;
+$btn-font-weight:                400 !default;
 
-$btn-default-color:              #333 !default;
-$btn-default-bg:                 #fff !default;
-$btn-default-border:             #ccc !default;
+$btn-default-color:              $gray-dark !default;
+$btn-default-bg:                 $gray-lighter !default;
+$btn-default-border:             $gray-light !default;
 
 $btn-primary-color:              #fff !default;
-$btn-primary-bg:                 $brand-primary !default;
+$btn-primary-bg:                 $link-color !default;
 $btn-primary-border:             darken($btn-primary-bg, 5%) !default;
 
 $btn-success-color:              #fff !default;
@@ -141,10 +146,10 @@ $btn-link-disabled-color:        $gray-light !default;
 $input-bg:                       #fff !default;
 $input-bg-disabled:              $gray-lighter !default;
 
-$input-color:                    $gray !default;
+$input-color:                    $gray-dark !default;
 $input-border:                   #ccc !default;
 $input-border-radius:            $border-radius-base !default;
-$input-border-focus:             #66afe9 !default;
+$input-border-focus:             $gray-light !default;
 
 $input-color-placeholder:        $gray-light !default;
 
@@ -163,22 +168,22 @@ $input-group-addon-border-color: $input-border !default;
 // -------------------------
 
 $dropdown-bg:                    #fff !default;
-$dropdown-border:                rgba(0,0,0,.15) !default;
+$dropdown-border:                $brand-primary !default;
 $dropdown-fallback-border:       #ccc !default;
 $dropdown-divider-bg:            #e5e5e5 !default;
 
-$dropdown-link-active-color:     #fff !default;
-$dropdown-link-active-bg:        $component-active-bg !default;
+$dropdown-link-active-color:     $brand-primary !default;
+$dropdown-link-active-bg:        #fff !default;
 
 $dropdown-link-color:            $gray-dark !default;
-$dropdown-link-hover-color:      #fff !default;
+$dropdown-link-hover-color:      $brand-primary !default;
 $dropdown-link-hover-bg:         $dropdown-link-active-bg !default;
 
 $dropdown-link-disabled-color:   $gray-light !default;
 
 $dropdown-header-color:          $gray-light !default;
 
-$dropdown-caret-color:           #000 !default;
+$dropdown-caret-color:           $gray-light !default;
 
 
 // COMPONENT VARIABLES
@@ -210,11 +215,11 @@ $screen-sm:                  768px !default;
 $screen-tablet:              $screen-sm !default;
 
 // Medium screen / desktop
-$screen-md:                  960px !default;
+$screen-md:                  1100px !default;
 $screen-desktop:             $screen-md !default;
 
 // Large screen / wide desktop
-$screen-lg:                  1200px !default;
+$screen-lg:                  1300px !default;
 $screen-lg-desktop:          $screen-lg !default;
 
 // So media queries don't overlap when required, provide a maximum
@@ -240,19 +245,19 @@ $grid-float-breakpoint:     $screen-desktop !default;
 // Basics of a navbar
 $navbar-height:                    50px !default;
 $navbar-margin-bottom:             $line-height-computed !default;
-$navbar-default-color:             #777 !default;
-$navbar-default-bg:                #f8f8f8 !default;	// CWP was #f3f3f3
-$navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-color:             $gray-dark !default;
+$navbar-default-bg:                $brand-secondary !default;	// CWP was #f3f3f3
+$navbar-default-border:            $brand-secondary !default;
 $navbar-border-radius:             $border-radius-base !default;
 $navbar-padding-horizontal:        floor($grid-gutter-width / 2) !default;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 
 // Navbar links
-$navbar-default-link-color:                #727272 !default;	// CWP was $gray
-$navbar-default-link-hover-color:          #333 !default;	// CWP was #555
-$navbar-default-link-hover-bg:             transparent !default; // CWP was #eee
-$navbar-default-link-active-color:         #555 !default;
-$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-link-color:                $gray-dark !default;	// CWP was $gray
+$navbar-default-link-hover-color:          $brand-primary !default;	// CWP was #555
+$navbar-default-link-hover-bg:             $brand-secondary !default; // CWP was #eee
+$navbar-default-link-active-color:         $brand-primary !default;
+$navbar-default-link-active-bg:            $brand-secondary !default;
 $navbar-default-link-disabled-color:       #ccc !default;
 $navbar-default-link-disabled-bg:          transparent !default;
 
@@ -334,12 +339,12 @@ $nav-pills-active-link-hover-color:         #fff !default;
 // -------------------------
 
 $pagination-bg:                        #fff !default;
-$pagination-border:                    #ddd !default;
+$pagination-border:                    transparent !default;
 
-$pagination-hover-bg:                  $gray-lighter !default;
+$pagination-hover-bg:                  transparent !default;
 
-$pagination-active-bg:                 $brand-primary !default;
-$pagination-active-color:              #fff !default;
+$pagination-active-bg:                 transparent !default;
+$pagination-active-color:              $gray-dark !default;
 
 $pagination-disabled-color:            $gray-light !default;
 
@@ -560,14 +565,14 @@ $breadcrumb-active-color:     $gray-light !default;
 // Carousel
 // ------------------------
 
-$carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6) !default;
+$carousel-text-shadow:                        none !default;
 
 $carousel-control-color:                      #fff !default;
 $carousel-control-width:                      15% !default;
 $carousel-control-opacity:                    .5 !default;
 $carousel-control-font-size:                  20px !default;
 
-$carousel-indicator-active-bg:                #fff !default;
+$carousel-indicator-active-bg:                $brand-primary !default;
 $carousel-indicator-border-color:             #fff !default;
 
 $carousel-caption-color:                      #fff !default;
@@ -616,7 +621,7 @@ $component-offset-horizontal: 180px !default;
 $container-tablet:            ((720px + $grid-gutter-width)) !default;
 
 // Medium screen / desktop
-$container-desktop:           ((940px + $grid-gutter-width)) !default;
+$container-desktop:           ((1020px + $grid-gutter-width)) !default;
 
 // Large screen / wide desktop
 $container-lg-desktop:        ((1140px + $grid-gutter-width)) !default;
@@ -628,19 +633,19 @@ $container-lg-desktop:        ((1140px + $grid-gutter-width)) !default;
 
 // Form states and alerts
 // -------------------------
-$warningText:             #c09853 !default;
+$warningText:             $brand-warning !default;
 $warningBackground:       #fcf8e3 !default;
 $warningBorder:           darken(adjust-hue($warningBackground, -10), 3%) !default;
 
-$errorText:               #b94a48 !default;
+$errorText:               $brand-danger !default;
 $errorBackground:         #fcf6f6 !default;
 $errorBorder:             darken(adjust-hue($errorBackground, -10), 5%) !default;
 
-$successText:             #468847 !default;
+$successText:             $brand-success !default;
 $successBackground:       #dff0d8 !default;
 $successBorder:           darken(adjust-hue($successBackground, -10), 5%) !default;
 
-$infoText:                #3a87ad !default;
+$infoText:                $brand-info !default;
 $infoBackground:          #d9edf7 !default;
 $infoBorder:              darken(adjust-hue($infoBackground, -10), 7%) !default;
 
