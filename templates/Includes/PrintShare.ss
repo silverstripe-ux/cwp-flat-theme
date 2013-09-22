@@ -2,14 +2,14 @@
 	<span id="print-placeholder"></span>
 
 	<% if SiteConfig.AddThisProfileID %>
-		<a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&pubid=$SiteConfig.AddThisProfileID"><i class="glyphicon glyphicon-share-alt"></i>Share</a>
+		<a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&pubid=$SiteConfig.AddThisProfileID">Share</a>
 	<% end_if %>
 
 	<% if $RSSLink %>
-		<a href="$RSSLink"><i class="icon-rss"></i>Subscribe</a>
+		<a href="$RSSLink">Subscribe</a>
 	<% else_if $DefaultRSSLink %>
-		<a href="$DefaultRSSLink"><i class="icon-rss"></i>Subscribe</a>
+		<a href="$DefaultRSSLink">Subscribe</a>
 	<% end_if %>
 
-	<% if PdfLink %><a href="$PdfLink" class="pdf"><i class="icon-file"></i>Export PDF</a><% end_if %>
+	<% if PdfLink %><a href="$PdfLink" class="pdf">Export PDF</a><% end_if %>
 </p>

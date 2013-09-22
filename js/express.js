@@ -71,7 +71,7 @@
 		});
 
 		// Print
-		$('#print-placeholder').replaceWith('<button type="button" onclick="window.print(); return false;"><i class="glyphicon glyphicon-print"></i>Print</button>');
+		$('#print-placeholder').replaceWith('<button type="button" onclick="window.print(); return false;">Print</button>');
 
 		// Carousel on the homepage.
 		$('.carousel').carousel({
