@@ -1,5 +1,5 @@
 <div class="row">
-	<div id="main" class="col-12">
+	<div id="main" class="col-md-16">
 		<h1 class="page-header">$Title</h1>
 
 		<div class="clearfix">

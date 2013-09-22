@@ -1,14 +1,12 @@
 <div id="BlogContent" class="typography">
 	<div class="row">
-		<div class="col-12">
-			<% include BreadCrumbs %>
-		</div>
-		<div class="col-3">
+		<div class="col-md-5">
 			<div class="sidebar-nav well">
 				<% include BlogSideBar %>
 			</div>
 		</div>
-		<div id="main" class="col-9">
+		<div id="main" class="col-md-11">
+			<% include BreadCrumbs %>
 			<div class="blogEntry">
 				<h2 class="postTitle">$Title</h2>
 				<p class="authorDate"><% _t('POSTEDBY', 'Posted by') %> $Author.XML <% _t('POSTEDON', 'on') %> $Date.Long | $Comments.Count <% _t('COMMENTS', 'Comments') %></p>

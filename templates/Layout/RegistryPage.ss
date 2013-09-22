@@ -1,6 +1,5 @@
 <div class="row">
-	<% include Breadcrumbs %>
-	<div class="col-3">
+	<div class="col-md-5">
 		<div class="sidebar-form well">
 			<div id="{$DataClass}_searchform" class="searchForm">
 				<h6>Search Filter</h6>
@@ -8,8 +7,9 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-9">
+	<div class="col-md-11">
 		<div id="main" role="main">
+			<% include Breadcrumbs %>
 			<h1 class="page-header">$Title</h1>
 
 			<div class="clearfix">
