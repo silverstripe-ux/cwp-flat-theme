@@ -38,12 +38,56 @@ THEME REPONSIVE STYLES
 			background-color: #333;
 		}
 	}
+
+	//NAVIGATION
+	.navbar {
+		span.showChildren { 
+			margin-top: 0;
+			right: 23px;
+		}
+		.dropdown.open {
+			.dropdown-menu {
+				width: 100%;
+				border: none;
+				float: none;
+				box-shadow: none;
+				position: relative;
+			}
+		}
+	}
+	.navbar-responsive-collapse {
+		margin-top: 50px;
+		.navbar-nav {
+			margin-top: 0;
+		}
+	}
 }
 
 // Tablets & small desktops only
 @media (min-width: $screen-xs) and (max-width: $screen-md-max) {
-	.layout .row {
-		margin-left: -15px;
-		margin-right: -15px;
+	.layout {
+		padding-left: 15px;
+		padding-right: 15px;
+		.row {
+			margin-left: -15px;
+			margin-right: -15px;
+		}
 	}
 }
+
+// Phones / Tablets and Small Desktops
+@media (max-width: $screen-md-max) {
+	//NAVIGATION
+	.no-js {
+		.navbar button.btn-navbar {
+			display: none;
+		}
+	}
+}
+
+// Tablets / Desktop / Large Desktop
+@media (min-width: $screen-sm) {
+
+}
+
+
