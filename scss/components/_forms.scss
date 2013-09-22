@@ -16,7 +16,7 @@ form {
 	&#Form_Form .req-indicator-message{
 		color: $errorText;
 		position: relative;
-		font-weight: normal;
+		font-weight: 300;
 		padding-top: 5px;
 		line-height: $line-height-computed*1.5;
 		padding-right:10px;
@@ -61,7 +61,7 @@ select,
 /* Label formatting */
 label {
 	&.left {
-		font-weight: bold;
+		font-weight: 400;
 	}
 	&.extra {
 		font-style: italic;
@@ -73,6 +73,7 @@ label {
 		float:none;
 		width:100%;
 		max-width:490px;
+		border-radius: 0;
 		.textarea &{
 			width:100%;
 			max-width: 100%;
@@ -168,7 +169,6 @@ div.checkbox {
 	label.required {
 		float: left;
 		margin-top: 5px;
-		margin-left: -20px;
 	}
 }
 
@@ -188,19 +188,24 @@ div.date{
 	line-height:12px !important;
 }
 
+.btn {
+	font-weight: 300;
+	padding: 0.18em 0.8em;
+}
 
 /* Submit button styling */
 .Actions{
 	border-top:1px solid darken(#f5f5f5,10%);
-	padding: 15px 0;
+	padding: 0;
+	margin-top: $grid-y*4;
 	@include clearfix;
 	.action{
 		@extend .btn;
 		@extend .btn-default;
-		padding-left:15px;
-		padding-right:15px;
+		padding-left: $grid-x*2;
+		padding-right: $grid-x*2;
 		margin: 0 $line-height-computed/2 $line-height-computed/2 0;
-		height:2.31em;
+		height:1.8em;
 		&.primary {
 			@extend .btn-primary;
 		}
