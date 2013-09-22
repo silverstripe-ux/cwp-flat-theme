@@ -11,15 +11,20 @@
 #layout .resultsHeader{
 	@extend .breadcrumb;
 	@include clearfix;
+	padding: $grid-y 0;
+	background-color: transparent;
 	height:auto;
+	border-top: 1px solid $gray-lighter;
+	border-bottom: 1px solid $gray-lighter;
 	p, h2 {
 		margin: 0px;
 		padding: 3px 0;
 	}
 	h2 {
-		font-weight:200;
-		font-size:1.3em;
-		line-height:1.3em;
+		font-weight:300;
+		font-size:1.1em;
+		line-height:1.1em;
+		color: $brand-tertiary;
 		a {
 			color: $link-color;
 			font-size: 0.7em;
@@ -38,28 +43,30 @@
 		margin-left:-10px;
 	}
 	article{
-		padding:10px 15px;
-		border-bottom: 1px solid $hr-border;
+		padding:10px 0;
+		border-bottom: 1px solid $gray-lighter;
 		@include clearfix;
 
 		&.first{
 			padding-top:0;
+			border-top: none;
 		}
 		p{
 			max-width:790px;
 			margin:0;
 			padding:5px 0;
 		}
+		small {
+			color: $gray-light;
+		}
 		h3{
 			line-height:1em;
 			font-size: 1.4em;
 			margin-top:5px;
-		}
-		&.even{
-			background: lighten($hr-border, 5%);
+			margin-bottom: $grid-y;
 		}
 		figure {
-			margin-right: 13px;
+			margin-left: 13px;
 			float: right;
 		}
 	}

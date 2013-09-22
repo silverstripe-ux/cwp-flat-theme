@@ -1,11 +1,12 @@
 <div class="row">
-	<% include Breadcrumbs %>
-	<div class="col-md-3">
+	<div class="col-md-5">
 		<div class="sidebar-nav">
-			<h6>Filter by tag</h6>
+			<div class="clearfix">
+				<h6 class="pull-left">Filter by tag</h6>
+				<small class="all-tags pull-right"><a href="$AllTagsLink" title="View all tags">View all tags</a></small>
+			</div>
 			<nav role="navigation">
 				<ul class="nav nav-list">
-					<li <% if CurrentTag %><% else %>class="active"<% end_if %>><a href="$AllTagsLink" title="View all tags">View all tags</a></li>
 					<% loop UpdateTagsWithLinks %>
 						<li <% if $Top.CurrentTag.ID==$ID %>class="active"<% end_if %>><a href="$Link" title="View items tagged $Name">$Name</a></li>
 					<% end_loop %>
@@ -25,14 +26,14 @@
 					<% end_if %>
 
 					<fieldset>
+						<p class="text-muted"><small class="tip">Tip: Leave one field blank to search for a single date.</small></p>
 						<div id="from" class="field date text">
-							<label class="left" for="{$FormName}_from">Filter from date:</label>
+							<label class="left" for="{$FormName}_from">Filter from date: <span class="field-note">(example: 31/12/13)</span></label>
 							$Fields.dataFieldByName(from)
 						</div>
 						<div id="to" class="field date text">
-							<label class="left" for="{$FormName}_to">Filter to date:</label>
+							<label class="left" for="{$FormName}_to">Filter to date: <span class="field-note">(example: 31/12/13)</span></label>
 							$Fields.dataFieldByName(to)
-							<p class="text-muted"><small>Tip: Leave one field blank to search for a single date.</small></p>
 						</div>
 						$Fields.dataFieldByName(tag)
 						$Fields.dataFieldByName(SecurityID)
@@ -47,7 +48,8 @@
 			<% end_with %>
 		</div>
 	</div>
-	<div id="main" class="col-md-9 resultsList" role="main">
+	<div id="main" class="col-md-11 resultsList" role="main">
+		<% include Breadcrumbs %>
 		<h1 class="page-header">$Title</h1>
 
 		<div class="clearfix">
@@ -75,7 +77,7 @@
 			</div>
 		
 			<% loop FilteredUpdates %>
-				<article class="$EvenOdd">
+				<article class="$EvenOdd<% if First %> first<% end_if %>">
 					<% if FeaturedImage %>
 						<figure>
 							$FeaturedImage.SetHeight(150)
@@ -84,7 +86,7 @@
 					<header>
 						<h3><a href="$Link">$Title</a></h3>
 					</header>
-					<p><time datetime="$Date">$Date.nice<% if $StartTime %> $StartTime.Nice<% if $EndTime %> - $EndTime.Nice<% end_if %><% end_if %></time><% if Author %> by $Author<% end_if %></p>
+					<small><time datetime="$Date">$Date.nice<% if $StartTime %> $StartTime.Nice<% if $EndTime %> - $EndTime.Nice<% end_if %><% end_if %></time><% if Author %> by $Author<% end_if %></small>
 					<p>
 						<% if Abstract %>
 							$Abstract

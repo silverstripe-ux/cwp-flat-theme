@@ -1,8 +1,7 @@
 <div class="row">
-	<% include Breadcrumbs %>
 	<div id="main" role="main">
-		<div class="col-md-3">
-			<div class="well update-information">
+		<div class="col-md-5">
+			<div class="sidebar-nav update-information">
 				<h2 class="nonvisual-indicator">News item information</h2>
 				<dl>
 					<dt>Date</dt>
@@ -24,7 +23,8 @@
 				</dl>
 			</div>
 		</div>
-		<div class="col-md-9">
+		<div class="col-md-11">
+			<% include Breadcrumbs %>
 			<h1 class="page-header">$Title</h1>
 
 			<div class="clearfix">
