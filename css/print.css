@@ -27,6 +27,34 @@
   margin-left: 0;
 }
 
+#IE6 .span16, #IE6 .row-fluid .span16 {
+  float: none;
+  display: block;
+  width: auto;
+  margin-left: 0;
+}
+
+#IE6 .span15, #IE6 .row-fluid .span15 {
+  float: none;
+  display: block;
+  width: auto;
+  margin-left: 0;
+}
+
+#IE6 .span14, #IE6 .row-fluid .span14 {
+  float: none;
+  display: block;
+  width: auto;
+  margin-left: 0;
+}
+
+#IE6 .span13, #IE6 .row-fluid .span13 {
+  float: none;
+  display: block;
+  width: auto;
+  margin-left: 0;
+}
+
 #IE6 .span12, #IE6 .row-fluid .span12 {
   float: none;
   display: block;

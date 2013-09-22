@@ -58,6 +58,7 @@ THEME TYPOGRAPHY
   font-style: normal;
   display: inline-block;
   text-decoration: inherit;
+  font-size: 0.9em;
 }
 
 a [class^="icon-"],
@@ -2250,19 +2251,296 @@ ul.icons li .icon-large:before {
   content: "\e160";
 }
 
+@font-face {
+  font-family: 'flat-icon';
+  src: url("../../../themes/flat/font/flat-icon.eot");
+  src: url("../../../themes/flat/font/flat-icon.eot?#iefix") format("embedded-opentype"), url("../../../themes/flat/font/flat-icon.woff") format("woff"), url("../../../themes/flat/font/flat-icon.ttf") format("truetype"), url("../../../themes/flat/font/flat-icon.svg#flat-icon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'flat-icon';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="flat-icon-"] {
+*/
+.flat-icon-users:before,
+.flat-icon-search:before,
+.flat-icon-link:before,
+.flat-icon-arrow-right:before,
+.flat-icon-arrow-left:before,
+.flat-icon-close:before,
+.flat-icon-checkmark:before,
+.flat-icon-facebook:before,
+.typography a[href*="facebook.com"]:before,
+.flat-icon-twitter:before,
+.typography a[href*="twitter.com"]:before,
+.flat-icon-feed:before,
+.typography a[href$=".rss"]:before,
+.typography a[href$="rss.xml"]:before,
+.typography a[href*="/feed/"]:before,
+.typography a[href*="/rss/"]:before,
+.typography a[href*="/rss"]:before,
+.typography a[href*="/changes"]:before,
+.flat-icon-github:before,
+.typography a[href*="github.com"]:before,
+.flat-icon-lock:before,
+.typography a[href^="https"]:before,
+.flat-icon-instagram:before,
+.typography a[href*="instagram.com"]:before,
+.flat-icon-anchor:before,
+.flat-icon-google:before,
+.typography a[href*="www.google"]:before,
+.flat-icon-browser:before,
+.typography a[href$=".exe"]:before,
+.typography a[href$=".EXE"]:before,
+.flat-icon-phone:before,
+.typography a[href^="tel:"]:before,
+.flat-icon-location:before,
+.typography a[href*="maps.google"]:before,
+.typography a[href*="wises.co.nz"]:before,
+.typography a[href*="maps.yellow"]:before,
+.typography a[href*="maps.yahoo"]:before,
+.flat-icon-bubbles:before,
+.flat-icon-linkedin:before,
+.typography a[href*="linkedin.com"]:before,
+.flat-icon-youtube:before,
+.typography a[href*="vimeo.com"]:before,
+.typography a[href*="youtube.com"]:before,
+.typography a[href*="ustream.tv"]:before,
+.typography a[href*="vevo.com"]:before,
+.flat-icon-external-link:before,
+.flat-icon-pinterest:before,
+.typography a[href*="pinterest.com"]:before,
+.flat-icon-print:before,
+.typography button[onclick*="window.print"]:before,
+.flat-icon-excel:before,
+.typography a[href$=".xls"]:before,
+.typography a[href$=".XLS"]:before,
+.typography a[href$=".xlsx"]:before,
+.typography a[href$=".XLSX"]:before,
+.flat-icon-pdf:before,
+.typography a[href$=".pdf"]:before,
+.typography a[href$=".PDF"]:before,
+.flat-icon-zip:before,
+.typography a[href$=".gz"]:before,
+.typography a[href$=".GZ"]:before,
+.typography a[href$=".gzip"]:before,
+.typography a[href$=".GZIP"]:before,
+.typography a[href$=".zip"]:before,
+.typography a[href$=".ZIP"]:before,
+.flat-icon-menu:before,
+.flat-icon-envelope:before,
+.typography a[href^="mailto:"]:before,
+.flat-icon-newspaper:before,
+.flat-icon-file:before,
+.typography a[href$=".doc"]:before,
+.typography a[href$=".DOC"]:before,
+.typography a[href$=".docx"]:before,
+.typography a[href$=".DOCX"]:before,
+.flat-icon-images:before,
+.typography a[href$=".jpg"]:before,
+.typography a[href$=".jpeg"]:before,
+.typography a[href$=".png"]:before,
+.typography a[href$=".gif"]:before,
+.flat-icon-export:before,
+.typography a[href*="addthis.com"]:before {
+  font-family: 'flat-icon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.flat-icon-users:before {
+  content: "\e00a";
+}
+
+.flat-icon-search:before {
+  content: "\e00b";
+}
+
+.flat-icon-link:before {
+  content: "\e00c";
+}
+
+.flat-icon-arrow-right:before {
+  content: "\e000";
+}
+
+.flat-icon-arrow-left:before {
+  content: "\e001";
+}
+
+.flat-icon-close:before {
+  content: "\e002";
+}
+
+.flat-icon-checkmark:before {
+  content: "\e003";
+}
+
+.flat-icon-facebook:before, .typography a[href*="facebook.com"]:before {
+  content: "\e00d";
+}
+
+.flat-icon-twitter:before, .typography a[href*="twitter.com"]:before {
+  content: "\e00e";
+}
+
+.flat-icon-feed:before, .typography a[href$=".rss"]:before,
+.typography a[href$="rss.xml"]:before,
+.typography a[href*="/feed/"]:before,
+.typography a[href*="/rss/"]:before,
+.typography a[href*="/rss"]:before,
+.typography a[href*="/changes"]:before {
+  content: "\e00f";
+}
+
+.flat-icon-github:before, .typography a[href*="github.com"]:before {
+  content: "\e010";
+}
+
+.flat-icon-lock:before, .typography a[href^="https"]:before {
+  content: "\e013";
+}
+
+.flat-icon-instagram:before, .typography a[href*="instagram.com"]:before {
+  content: "\f16d";
+}
+
+.flat-icon-anchor:before {
+  content: "\f13d";
+}
+
+.flat-icon-google:before, .typography a[href*="www.google"]:before {
+  content: "\e014";
+}
+
+.flat-icon-browser:before, .typography a[href$=".exe"]:before,
+.typography a[href$=".EXE"]:before {
+  content: "\e015";
+}
+
+.flat-icon-phone:before, .typography a[href^="tel:"]:before {
+  content: "\e017";
+}
+
+.flat-icon-location:before, .typography a[href*="maps.google"]:before,
+.typography a[href*="wises.co.nz"]:before,
+.typography a[href*="maps.yellow"]:before,
+.typography a[href*="maps.yahoo"]:before {
+  content: "\e016";
+}
+
+.flat-icon-bubbles:before {
+  content: "\e019";
+}
+
+.flat-icon-linkedin:before, .typography a[href*="linkedin.com"]:before {
+  content: "\e01a";
+}
+
+.flat-icon-youtube:before, .typography a[href*="vimeo.com"]:before,
+.typography a[href*="youtube.com"]:before,
+.typography a[href*="ustream.tv"]:before,
+.typography a[href*="vevo.com"]:before {
+  content: "\e009";
+}
+
+.flat-icon-external-link:before {
+  content: "\e01c";
+}
+
+.flat-icon-pinterest:before, .typography a[href*="pinterest.com"]:before {
+  content: "\e01d";
+}
+
+.flat-icon-print:before, .typography button[onclick*="window.print"]:before {
+  content: "\e012";
+}
+
+.flat-icon-excel:before, .typography a[href$=".xls"]:before,
+.typography a[href$=".XLS"]:before,
+.typography a[href$=".xlsx"]:before,
+.typography a[href$=".XLSX"]:before {
+  content: "\e004";
+}
+
+.flat-icon-pdf:before, .typography a[href$=".pdf"]:before,
+.typography a[href$=".PDF"]:before {
+  content: "\e005";
+}
+
+.flat-icon-zip:before, .typography a[href$=".gz"]:before,
+.typography a[href$=".GZ"]:before,
+.typography a[href$=".gzip"]:before,
+.typography a[href$=".GZIP"]:before,
+.typography a[href$=".zip"]:before,
+.typography a[href$=".ZIP"]:before {
+  content: "\e007";
+}
+
+.flat-icon-menu:before {
+  content: "\e008";
+}
+
+.flat-icon-envelope:before, .typography a[href^="mailto:"]:before {
+  content: "\e011";
+}
+
+.flat-icon-newspaper:before {
+  content: "\e018";
+}
+
+.flat-icon-file:before, .typography a[href$=".doc"]:before,
+.typography a[href$=".DOC"]:before,
+.typography a[href$=".docx"]:before,
+.typography a[href$=".DOCX"]:before {
+  content: "\e006";
+}
+
+.flat-icon-images:before, .typography a[href$=".jpg"]:before,
+.typography a[href$=".jpeg"]:before,
+.typography a[href$=".png"]:before,
+.typography a[href$=".gif"]:before {
+  content: "\e01b";
+}
+
+.flat-icon-export:before, .typography a[href*="addthis.com"]:before {
+  content: "\e01e";
+}
+
 p {
-  margin: 0 0 10px;
+  margin: 0 0 12.5px;
 }
 
 .lead {
-  margin-bottom: 20px;
-  font-size: 16.1px;
+  margin-bottom: 25px;
+  font-size: 20.7px;
   font-weight: 200;
   line-height: 1.4;
 }
 @media (min-width: 768px) {
   .lead {
-    font-size: 21px;
+    font-size: 27px;
   }
 }
 
@@ -2279,7 +2557,7 @@ cite {
 }
 
 .text-primary {
-  color: #007fad;
+  color: #807129;
 }
 
 .text-warning {
@@ -2312,8 +2590,8 @@ cite {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
   line-height: 1.1;
 }
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small,
@@ -2326,64 +2604,64 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small,
 h1,
 h2,
 h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 25px;
+  margin-bottom: 12.5px;
 }
 
 h4,
 h5,
 h6 {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 12.5px;
+  margin-bottom: 12.5px;
 }
 
 h1, .h1 {
-  font-size: 36px;
+  font-size: 46px;
 }
 
 h2, .h2 {
-  font-size: 30px;
+  font-size: 38px;
 }
 
 h3, .h3 {
-  font-size: 24px;
+  font-size: 31px;
 }
 
 h4, .h4 {
-  font-size: 18px;
+  font-size: 23px;
 }
 
 h5, .h5 {
-  font-size: 14px;
+  font-size: 18px;
 }
 
 h6, .h6 {
-  font-size: 12px;
+  font-size: 16px;
 }
 
 h1 small, .h1 small {
-  font-size: 24px;
+  font-size: 31px;
 }
 
 h2 small, .h2 small {
-  font-size: 18px;
+  font-size: 23px;
 }
 
 h3 small, .h3 small,
 h4 small, .h4 small {
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .page-header {
-  padding-bottom: 9px;
-  margin: 40px 0 20px;
+  padding-bottom: 11.5px;
+  margin: 50px 0 25px;
   border-bottom: 1px solid #eeeeee;
 }
 
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 12.5px;
 }
 ul ul,
 ul ol,
@@ -2404,7 +2682,7 @@ ol ol {
 }
 
 dl {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 dt,
@@ -2420,7 +2698,7 @@ dd {
   margin-left: 0;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 1100px) {
   .dl-horizontal dt {
     float: left;
     width: 160px;
@@ -2455,12 +2733,12 @@ abbr.initialism {
 }
 
 blockquote {
-  padding: 10px 20px;
-  margin: 0 0 20px;
+  padding: 12.5px 25px;
+  margin: 0 0 25px;
   border-left: 5px solid #eeeeee;
 }
 blockquote p {
-  font-size: 17.5px;
+  font-size: 22.5px;
   font-weight: 300;
   line-height: 1.25;
 }
@@ -2501,7 +2779,7 @@ blockquote:after {
 
 address {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font-style: normal;
   line-height: 1.428571429;
 }
@@ -2517,24 +2795,24 @@ code {
   color: #c7254e;
   background-color: #f9f2f4;
   white-space: nowrap;
-  border-radius: 4px;
+  border-radius: 0px;
 }
 
 pre {
   display: block;
-  padding: 9.5px;
-  margin: 0 0 10px;
-  font-size: 13px;
+  padding: 12px;
+  margin: 0 0 12.5px;
+  font-size: 17px;
   line-height: 1.428571429;
   word-break: break-all;
   word-wrap: break-word;
   color: #333333;
   background-color: whitesmoke;
   border: 1px solid #cccccc;
-  border-radius: 4px;
+  border-radius: 0px;
 }
 pre.prettyprint {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 pre code {
   padding: 0;
@@ -2561,7 +2839,7 @@ th {
 
 .table, .typography table {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 .table thead > tr > th, .typography table thead > tr > th,
 .table thead > tr > td,
@@ -2577,11 +2855,11 @@ th {
   padding: 8px;
   line-height: 1.428571429;
   vertical-align: top;
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #cccccc;
 }
 .table thead > tr > th, .typography table thead > tr > th {
   vertical-align: bottom;
-  border-bottom: 2px solid #dddddd;
+  border-bottom: 2px solid #cccccc;
 }
 .table caption + thead tr:first-child th, .typography table caption + thead tr:first-child th, .table caption + thead tr:first-child td, .typography table caption + thead tr:first-child td,
 .table colgroup + thead tr:first-child th,
@@ -2595,7 +2873,7 @@ th {
   border-top: 0;
 }
 .table tbody + tbody, .typography table tbody + tbody {
-  border-top: 2px solid #dddddd;
+  border-top: 2px solid #cccccc;
 }
 .table .table, .typography table .table, .table .typography table, .typography .table table, .typography table table {
   background-color: white;
@@ -2621,7 +2899,7 @@ th {
 }
 
 .table-bordered, .typography table.table-bordered, .typography table.table-bordered-striped {
-  border: 1px solid #dddddd;
+  border: 1px solid #cccccc;
 }
 .table-bordered > thead > tr > th, .typography table.table-bordered > thead > tr > th, .typography table.table-bordered-striped > thead > tr > th,
 .table-bordered > thead > tr > td,
@@ -2639,7 +2917,7 @@ th {
 .table-bordered > tfoot > tr > td,
 .typography table.table-bordered > tfoot > tr > td,
 .typography table.table-bordered-striped > tfoot > tr > td {
-  border: 1px solid #dddddd;
+  border: 1px solid #cccccc;
 }
 .table-bordered > thead > tr > th, .typography table.table-bordered > thead > tr > th, .typography table.table-bordered-striped > thead > tr > th,
 .table-bordered > thead > tr > td,
@@ -2652,12 +2930,12 @@ th {
 .table-striped > tbody > tr:nth-child(odd) > th,
 .typography table.table-bordered-striped > tbody > tr:nth-child(odd) > th,
 .typography table.table-condensed-striped > tbody > tr:nth-child(odd) > th {
-  background-color: whitesmoke;
+  background-color: #f2f2f2;
 }
 
 .table-hover > tbody > tr:hover > td,
 .table-hover > tbody > tr:hover > th {
-  background-color: #f0f0f0;
+  background-color: #ebe8dd;
 }
 
 table col[class*="col-"] {
@@ -2690,7 +2968,7 @@ table th[class*="col-"] {
 .typography table > tfoot > tr.active > td,
 .table > tfoot > tr.active > th,
 .typography table > tfoot > tr.active > th {
-  background-color: #f0f0f0;
+  background-color: #ebe8dd;
 }
 
 .table > thead > tr > td.success, .typography table > thead > tr > td.success,
@@ -2786,7 +3064,7 @@ table th[class*="col-"] {
     margin-bottom: 15px;
     overflow-y: hidden;
     overflow-x: scroll;
-    border: 1px solid #dddddd;
+    border: 1px solid #cccccc;
   }
   .table-responsive > .table, .typography .table-responsive > table {
     margin-bottom: 0;
@@ -2851,7 +3129,7 @@ table th[class*="col-"] {
 .jumbotron {
   padding: 30px;
   margin-bottom: 30px;
-  font-size: 21px;
+  font-size: 27px;
   font-weight: 200;
   line-height: 2.142857144;
   color: inherit;
@@ -2865,7 +3143,7 @@ table th[class*="col-"] {
   line-height: 1.4;
 }
 .container .jumbotron {
-  border-radius: 6px;
+  border-radius: 4px;
 }
 @media screen and (min-width: 768px) {
   .jumbotron {
@@ -2877,7 +3155,7 @@ table th[class*="col-"] {
     padding-right: 60px;
   }
   .jumbotron h1 {
-    font-size: 63px;
+    font-size: 81px;
   }
 }
 
@@ -2924,36 +3202,93 @@ table th[class*="col-"] {
 }
 
 .typography {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+  /* EMs font sizing */
   /* Highlighting for search results titles and content snippets. */
   /*** FILE & LINK ICONS ***/
-  /* EXTERNAL LINKS */
+  /* EXTERNAL LINKS - we need to add custom styles here as we are adding the icon as an :after pseudo element not a :before */
+  /* ANCHOR LINKS */
+  /* FILE LINKS */
+  /* EMAIL LINKS */
+  /* PHONE LINKS */
+  /* RSS LINKS */
+  /* IMAGE LINKS */
+  /* VIDEO LINKS */
+  /* PRINT BUTTON */
+  /* SHARE LINKS */
+  /* MAPS LINKS */
+  /* GOOGLE LINKS */
+  /* FACEBOOK LINKS */
+  /* TWITTER LINKS */
+  /* GITHUB LINKS */
+  /* INSTAGRAM LINKS */
+  /* LINKEDIN LINKS */
+  /* PINTEREST LINKS */
   /* Media insert formatting  (Youtube embed) */
   /*** Image formatting ***/
 }
-.typography h1.page-header {
-  margin-top: 20px;
+.typography small {
+  font-size: 0.85714286em;
+  font-weight: 300;
 }
-.typography h6 {
+.typography small.tip {
+  font-style: italic;
+}
+.typography h6,
+.typography h5,
+.typography h4 {
+  font-size: 1.07142857em;
+  font-weight: 400;
+}
+.typography h3 {
+  font-size: 1.28571429em;
+  font-weight: 300;
+}
+.typography h2 {
+  font-size: 1.57142857em;
+  font-weight: 300;
+}
+.typography h1 {
+  font-size: 2.14285714em;
+  font-weight: 400;
+}
+.typography h6,
+.typography h3 {
   color: #666666;
+}
+.typography h5,
+.typography h4,
+.typography h2,
+.typography h1 {
+  color: #807129;
+}
+.typography h1.page-header {
+  margin-top: 5px;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-bottom: none;
 }
 .typography p {
   margin-bottom: 1.428571429;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.428571429;
+  font-weight: 300;
 }
 .typography a:focus {
   outline: none;
 }
 .typography a:hover img, .typography a:focus img {
-  border: 1px solid #00739c;
+  border: 1px solid #28616b;
+}
+.typography a:hover {
+  text-decoration: none;
 }
 .typography .metaInfo {
   margin-bottom: 0.714285715;
   color: #555555;
 }
 .typography span.highlight {
-  background: yellow;
+  background: #ebe8dd;
 }
 .typography blockquote small, .typography blockquote .blockquote-author {
   font-size: 85%;
@@ -2968,63 +3303,129 @@ table th[class*="col-"] {
 .typography q:after {
   content: "";
 }
+.typography a:before,
+.typography button:before {
+  margin-right: 0.2em;
+}
 .typography .fileExt {
   font-size: 0.8em;
 }
-.typography a[href^="http://"],
-.typography a[href^="https"],
-.typography a.external {
-  padding-right: 13px;
-  display: inline-block;
-  background: transparent url(../../../themes/default/images/icons/external-link.png) no-repeat right 0;
+.typography a[href^="http://"]:after,
+.typography a[href^="https"]:after {
+  content: "\e01c";
+  font-family: 'flat-icon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  font-size: 0.6em;
+  position: relative;
+  bottom: 0.4em;
 }
-.typography a[href$=".doc"],
-.typography a[href$=".DOC"],
-.typography a[href$=".docx"],
-.typography a[href$=".DOCX"],
-.typography .doc {
-  padding-left: 22px;
-  background: url(../../../themes/default/images/icons/page_word.png) no-repeat left 0;
-  padding-right: 0;
-  /* override external link */
+.typography a[href*="#"]:after,
+.typography a[href*="#"]:after {
+  content: "\f13d";
+  font-family: 'flat-icon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  font-size: 0.6em;
+  position: relative;
+  bottom: 0.4em;
 }
-.typography a[href$=".xls"],
-.typography a[href$=".XLS"],
-.typography a[href$=".xlsx"],
-.typography a[href$=".XLSX"],
-.typography .xls {
-  padding-left: 22px;
-  background: url(../../../themes/default/images/icons/page_excel.png) no-repeat left 0;
-  padding-right: 0;
-  /* override external link */
+.typography a[href$=".doc"]:after,
+.typography a[href$=".DOC"]:after,
+.typography a[href$=".docx"]:after,
+.typography a[href$=".DOCX"]:after {
+  content: '';
 }
-.typography a[href$=".gz"],
-.typography a[href$=".GZ"],
-.typography a[href$=".gzip"],
-.typography a[href$=".GZIP"],
-.typography a[href$=".zip"],
-.typography a[href$=".ZIP"],
-.typography .archive {
-  padding-left: 22px;
-  background: url(../../../themes/default/images/icons/page_white_zip.png) no-repeat left 0;
-  padding-right: 0;
-  /* override external link */
+.typography a[href$=".xls"]:after,
+.typography a[href$=".XLS"]:after,
+.typography a[href$=".xlsx"]:after,
+.typography a[href$=".XLSX"]:after {
+  content: '';
 }
-.typography a[href$=".exe"],
-.typography a[href$=".EXE"],
-.typography .application {
-  padding-left: 22px;
-  background: url(../../../themes/default/images/icons/application.png) no-repeat left 0;
-  padding-right: 0;
-  /* override external link */
+.typography a[href$=".gz"]:after,
+.typography a[href$=".GZ"]:after,
+.typography a[href$=".gzip"]:after,
+.typography a[href$=".GZIP"]:after,
+.typography a[href$=".zip"]:after,
+.typography a[href$=".ZIP"]:after {
+  content: '';
 }
-.typography a[href$=".pdf"],
-.typography a[href$=".PDF"],
-.typography .pdf {
-  padding-left: 22px;
-  background: url(../../../themes/default/images/icons/page_white_acrobat.png) no-repeat left 0;
-  padding-right: 0;
-  /* override external link */
+.typography a[href$=".exe"]:after,
+.typography a[href$=".EXE"]:after {
+  content: '';
+}
+.typography a[href$=".pdf"]:after,
+.typography a[href$=".PDF"]:after {
+  content: '';
+}
+.typography a[href^="mailto:"]:after {
+  content: '';
+}
+.typography a[href^="tel:"]:after {
+  content: '';
+}
+.typography a[href$=".rss"]:after,
+.typography a[href$="rss.xml"]:after,
+.typography a[href*="/feed/"]:after,
+.typography a[href*="/rss/"]:after,
+.typography a[href*="/rss"]:after,
+.typography a[href*="/changes"]:after {
+  content: '';
+}
+.typography a[href$=".jpg"]:after,
+.typography a[href$=".jpeg"]:after,
+.typography a[href$=".png"]:after,
+.typography a[href$=".gif"]:after {
+  content: '';
+}
+.typography a[href*="vimeo.com"]:after,
+.typography a[href*="youtube.com"]:after,
+.typography a[href*="ustream.tv"]:after,
+.typography a[href*="vevo.com"]:after {
+  content: '';
+}
+.typography button[onclick*="window.print"]:after {
+  content: '';
+}
+.typography a[href*="addthis.com"]:after {
+  content: '';
+}
+.typography a[href*="maps.google"]:after,
+.typography a[href*="wises.co.nz"]:after,
+.typography a[href*="maps.yellow"]:after,
+.typography a[href*="maps.yahoo"]:after {
+  content: '';
+}
+.typography a[href*="www.google"]:after {
+  content: '';
+}
+.typography a[href*="facebook.com"]:after {
+  content: '';
+}
+.typography a[href*="twitter.com"]:after {
+  content: '';
+}
+.typography a[href*="github.com"]:after {
+  content: '';
+}
+.typography a[href*="instagram.com"]:after {
+  content: '';
+}
+.typography a[href*="linkedin.com"]:after {
+  content: '';
+}
+.typography a[href*="pinterest.com"]:after {
+  content: '';
 }
 .typography .media.center {
   margin: 0 auto;
@@ -3111,7 +3512,7 @@ table th[class*="col-"] {
   margin-left: 0;
 }
 .typography table.table-striped tbody tr:hover td, .typography table.table-bordered-striped tbody tr:hover td, .typography table.table-condensed-striped tbody tr:hover td, .typography table.table-striped tbody tr:hover th, .typography table.table-bordered-striped tbody tr:hover th, .typography table.table-condensed-striped tbody tr:hover th, .typography table.table-bordered-striped tbody tr:hover td, .typography table.table-bordered-striped tbody tr:hover th {
-  background-color: #f0f0f0;
+  background-color: #ebe8dd;
 }
 .typography table caption {
   text-align: left;
@@ -3128,6 +3529,14 @@ table th[class*="col-"] {
   padding: 15px 0;
   border-top: 1px solid #eeeeee;
 }
-.typography .heroUnit p {
-  font-size: 21px;
+.typography .box-element, .typography .heroUnit {
+  margin: 0 -20px;
+  background-color: #f2f2f2;
+}
+.typography .heroUnit {
+  border-radius: 0;
+  padding: 20px;
+}
+.typography .heroUnit h1 {
+  margin-top: 0;
 }
