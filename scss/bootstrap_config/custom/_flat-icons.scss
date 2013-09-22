@@ -1,0 +1,173 @@
+$flat-icon-path: "../../../themes/flat/font/flat-icon" !default;
+
+@font-face {
+	font-family: 'flat-icon';
+	src:url('#{$flat-icon-path}.eot');
+	src:url('#{$flat-icon-path}.eot?#iefix') format('embedded-opentype'),
+		url('#{$flat-icon-path}.woff') format('woff'),
+		url('#{$flat-icon-path}.ttf') format('truetype'),
+		url('#{$flat-icon-path}.svg#flat-icon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'flat-icon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="flat-icon-"] {
+*/
+.flat-icon-users:before,
+.flat-icon-search:before,
+.flat-icon-link:before,
+.flat-icon-arrow-right:before,
+.flat-icon-arrow-left:before,
+.flat-icon-close:before,
+.flat-icon-checkmark:before,
+.flat-icon-facebook:before,
+.flat-icon-twitter:before,
+.flat-icon-feed:before,
+.flat-icon-github:before,
+.flat-icon-lock:before,
+.flat-icon-instagram:before,
+.flat-icon-anchor:before,
+.flat-icon-google:before,
+.flat-icon-browser:before,
+.flat-icon-phone:before,
+.flat-icon-location:before,
+.flat-icon-bubbles:before,
+.flat-icon-linkedin:before,
+.flat-icon-youtube:before,
+.flat-icon-external-link:before,
+.flat-icon-pinterest:before,
+.flat-icon-print:before,
+.flat-icon-excel:before,
+.flat-icon-pdf:before,
+.flat-icon-zip:before,
+.flat-icon-menu:before,
+.flat-icon-envelope:before,
+.flat-icon-newspaper:before,
+.flat-icon-file:before,
+.flat-icon-images:before,
+.flat-icon-export:before {
+	font-family: 'flat-icon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.flat-icon-users:before {
+	content: "\e00a";
+}
+.flat-icon-search:before {
+	content: "\e00b";
+}
+.flat-icon-link:before {
+	content: "\e00c";
+}
+.flat-icon-arrow-right:before {
+	content: "\e000";
+}
+.flat-icon-arrow-left:before {
+	content: "\e001";
+}
+.flat-icon-close:before {
+	content: "\e002";
+}
+.flat-icon-checkmark:before {
+	content: "\e003";
+}
+.flat-icon-facebook:before {
+	content: "\e00d";
+}
+.flat-icon-twitter:before {
+	content: "\e00e";
+}
+.flat-icon-feed:before {
+	content: "\e00f";
+}
+.flat-icon-github:before {
+	content: "\e010";
+}
+.flat-icon-lock:before {
+	content: "\e013";
+}
+.flat-icon-instagram:before {
+	content: "\f16d";
+}
+.flat-icon-anchor:before {
+	content: "\f13d";
+}
+.flat-icon-google:before {
+	content: "\e014";
+}
+.flat-icon-browser:before {
+	content: "\e015";
+}
+.flat-icon-phone:before {
+	content: "\e017";
+}
+.flat-icon-location:before {
+	content: "\e016";
+}
+.flat-icon-bubbles:before {
+	content: "\e019";
+}
+.flat-icon-linkedin:before {
+	content: "\e01a";
+}
+.flat-icon-youtube:before {
+	content: "\e009";
+}
+.flat-icon-external-link:before {
+	content: "\e01c";
+}
+.flat-icon-pinterest:before {
+	content: "\e01d";
+}
+.flat-icon-print:before {
+	content: "\e012";
+}
+.flat-icon-excel:before {
+	content: "\e004";
+}
+.flat-icon-pdf:before {
+	content: "\e005";
+}
+.flat-icon-zip:before {
+	content: "\e007";
+}
+.flat-icon-menu:before {
+	content: "\e008";
+}
+.flat-icon-envelope:before {
+	content: "\e011";
+}
+.flat-icon-newspaper:before {
+	content: "\e018";
+}
+.flat-icon-file:before {
+	content: "\e006";
+}
+.flat-icon-images:before {
+	content: "\e01b";
+}
+.flat-icon-export:before {
+	content: "\e01e";
+}
