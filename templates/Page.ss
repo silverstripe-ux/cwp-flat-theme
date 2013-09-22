@@ -46,16 +46,17 @@
 	<% else %>
 		<link rel="apple-touch-icon-precomposed" href="{$BaseHref}{$ThemeDir}/ico/apple-touch-icon-57-precomposed.png">
 	<% end_if %>
+
+	<%-- Google Font Code --%>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
 </head>
 
-<body data-spy="scroll">
+<body data-spy="scroll" class="$ClassName">
 	
 	<% include Header %>
-	<% include MainNav %>
 
 	<div class="container typography layout" id="layout">
 		$Layout
-		<hr />
 	</div>
 
 	<% include Footer %>
