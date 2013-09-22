@@ -1,38 +1,62 @@
 // Carousel accessibility adjustments
 // Bootstrap carousel-control links made into buttons
 .carousel {
-	margin-bottom: 20px;
 	a {
 		border: none;
 		background-color: transparent;
-		&.pause {
-			padding: 0;
-			color: #FFF;
+		color: #fff;
+		opacity: 0.65;
+		&.active {
+			background-color: $link-color;
+			opacity: 1;
+		}
+
+		&:hover, &:active, &:focus {
+			opacity: 1;
+			outline: none;
+			text-decoration: none;
+		}
+	}
+	
+	.carousel-interface {
+		position: absolute;
+		bottom: 15px;
+		right: 12.5%;
+		z-index: 15;
+		a.pause {
+
+			&:after {
+				content: '';
+			}
+		}
+		a.carousel-control {
+			position: static;
+			display: inline;
+			outline: none;
+			border: 0px;
+			font-size: 20px;
+			background-image: none;
+			width: 30px;
+			&:after {
+				content: '';
+			}
+		}
+
+		.glyphicon {
 			font-family: Glyphicons Halflings;
 			font-weight: normal;
 			font-style: normal;
-			font-size: 20px;
-			position: absolute;
-			bottom: 15px;
-			right: 7.5%;
-			opacity: 0.75;
-			z-index: 15;
-			text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-			&:focus, &:hover {
-				opacity: 1;
-				text-decoration: none;
-			}
+			display: inline-block;
+			text-decoration: inherit;
+			position: static;
 		}
-	}
-	.carousel-control {
-		&:focus {
-			@extend .carousel-control:hover;
-			outline: none;
-		}
-		&.right {
-			.glyphicon {
-				left: auto;
-				right: 50%;
+
+		.carousel-indicators {
+			float: left;
+			margin-top: 8px;
+
+			a {
+				text-indent: -9999px;
 			}
 		}
 	}
@@ -46,7 +70,7 @@
 	.carousel-indicators {
 		position: absolute;
 		bottom: 15px;
-		left: 7.5%;
+		left: $grid-x*4;
 		margin:0;
 		height: auto;
 		width: auto;
@@ -72,17 +96,30 @@
 				width:  12px;
 				height: 12px;
 				background-color: $carousel-indicator-active-bg;
+				border: 1px solid $brand-primary;
+			}
+			&:focus {
+				outline: none;
 			}
 		}
 	}
 	
 	// background color added for added accessibilty
 	.carousel-caption {
-		background-color: #333;
-		background-color: rgba(0, 0, 0, 0.5);
+		background-color: $brand-primary;
 		padding-bottom: 50px;
-		bottom: 0;
-		left: 0;
-		right: 0;
+		position: static;
+		bottom: auto;
+		left: auto;
+		right: auto;
+		text-align: left;
+		h4 {
+			color: #fff;
+			text-transform: uppercase;
+			font-weight: 300;
+		}
+	}
+	.carousel-image {
+		padding: 0;
 	}
 }
