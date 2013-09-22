@@ -16,6 +16,7 @@
 @import "custom/variables"; // Modify this for custom colors, font-sizes, etc
 @import "../../../module_bootstrap/lib/mixins";
 @import "custom/custom-mixins";
+@import "custom/grid";
 
 // Reset
 @import "../../../module_bootstrap/lib/normalize";
@@ -23,7 +24,6 @@
 
 // Core CSS
 @import "../../../module_bootstrap/lib/scaffolding";
-@import "../../../module_bootstrap/lib/grid";
 @import "../../../module_bootstrap/lib/forms";			// move to form
 @import "../../../module_bootstrap/lib/buttons";		// move to form
 
