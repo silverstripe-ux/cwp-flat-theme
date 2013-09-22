@@ -19,18 +19,64 @@ THEME TYPOGRAPHY
 .typography {
 	font-family: $font-family-sans-serif;
 	
+	/* EMs font sizing */
+	
+	small {
+		font-size: 0.85714286em;
+		font-weight: 300;
+	}
+
+	small.tip {
+		font-style: italic;
+	}
+
+	h6,
+	h5,
+	h4 {
+		font-size: 1.07142857em;
+		font-weight: 400;
+	}
+
+	h3 {
+		font-size: 1.28571429em;
+		font-weight: 300;
+	}
+
+	h2 {
+		font-size: 1.57142857em;
+		font-weight: 300;
+	}
+
+	h1 {
+		font-size: 2.14285714em;
+		font-weight: 400;
+	}
+
+	h6,
+	h3 {
+		color: #666666;
+	}
+
+	h5,
+	h4,
+	h2,
+	h1 {
+		color: $brand-primary;
+	}
+
 	h1 {
 		&.page-header {
-			margin-top: 20px;
+			margin-top: $grid-y;
+			font-weight: 300;
+			text-transform: uppercase;
+			border-bottom: none;
 		}
-	}
-	h6 {
-		color: #666666;
 	}
 	p {
 		margin-bottom: $line-height-base;
 		font-size: $font-size-base;
 		line-height: $line-height-base;
+		font-weight: 300;
 	}
 	a {
 		&:focus {
@@ -38,6 +84,9 @@ THEME TYPOGRAPHY
 		}
 		&:hover img, &:focus img{
 			border: 1px solid $link-color;
+		}
+		&:hover {
+			text-decoration: none;
 		}
 	}
 	.metaInfo {
@@ -47,7 +96,7 @@ THEME TYPOGRAPHY
 
 	/* Highlighting for search results titles and content snippets. */
 	span.highlight {
-		background: yellow;
+		background: $table-bg-hover;
 	}
 
 	// Quotes
@@ -70,63 +119,231 @@ THEME TYPOGRAPHY
 	}
 
 	/*** FILE & LINK ICONS ***/
-	
+	a:before,
+	button:before {
+		margin-right: 0.2em;
+	}
+
 	.fileExt{
 		font-size: 0.8em;
 	}
 	
-	/* EXTERNAL LINKS */
-	a[href^="http://"],
-	a[href^="https"],
-	a.external {
-		padding-right: 13px;
-		display:inline-block;
-		background: transparent url(../../../themes/default/images/icons/external-link.png) no-repeat right 0; 
+	/* EXTERNAL LINKS - we need to add custom styles here as we are adding the icon as an :after pseudo element not a :before */
+	a[href^="http://"]:after,
+	a[href^="https"]:after {
+		content: "\e01c";
+		font-family: 'flat-icon';
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		font-size: 0.6em;
+		position:relative;
+		bottom:0.4em;
 	}
 
+	a[href^="https"] {
+		@extend .flat-icon-lock; // adding a padlock to secure links - still has the external link icon :after as well.
+	}
+
+	/* ANCHOR LINKS */
+	a[href*="#"]:after,
+	a[href*="#"]:after {
+		content: "\f13d";
+		font-family: 'flat-icon';
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		font-size: 0.6em;
+		position:relative;
+		bottom:0.4em;
+	}
+	
+	/* FILE LINKS */
 	a[href$=".doc"],
 	a[href$=".DOC"],
 	a[href$=".docx"],
-	a[href$=".DOCX"],
-	.doc {
-		padding-left: 22px;
-		background: url(../../../themes/default/images/icons/page_word.png) no-repeat left 0;
-		padding-right: 0; /* override external link */
+	a[href$=".DOCX"] {
+		@extend .flat-icon-file;
+		&:after { //Override the external link styling
+			content: '';
+		}
 	}
 	a[href$=".xls"],
 	a[href$=".XLS"],
 	a[href$=".xlsx"],
-	a[href$=".XLSX"],
-	.xls {
-		padding-left: 22px;
-		background: url(../../../themes/default/images/icons/page_excel.png) no-repeat left 0;
-		padding-right: 0; /* override external link */
+	a[href$=".XLSX"] {
+		@extend .flat-icon-excel;
+		&:after { //Override the external link styling
+			content: '';
+		}
 	}
 	a[href$=".gz"],
 	a[href$=".GZ"],
 	a[href$=".gzip"],
 	a[href$=".GZIP"],
 	a[href$=".zip"],
-	a[href$=".ZIP"],
-	.archive {
-		padding-left: 22px;
-		background: url(../../../themes/default/images/icons/page_white_zip.png) no-repeat left 0;
-		padding-right: 0; /* override external link */
+	a[href$=".ZIP"] {
+		@extend .flat-icon-zip;
+		&:after { //Override the external link styling
+			content: '';
+		}
 	}
 	a[href$=".exe"],
-	a[href$=".EXE"],
-	.application {
-		padding-left: 22px;
-		background: url(../../../themes/default/images/icons/application.png) no-repeat left 0;
-		padding-right: 0; /* override external link */
+	a[href$=".EXE"] {
+		@extend .flat-icon-browser;
+		&:after { //Override the external link styling
+			content: '';
+		}
 	}
 	
 	a[href$=".pdf"],
-	a[href$=".PDF"],
-	.pdf {
-		padding-left: 22px;
-		background: url(../../../themes/default/images/icons/page_white_acrobat.png) no-repeat left 0;	
-		padding-right: 0; /* override external link */
+	a[href$=".PDF"] {
+		@extend .flat-icon-pdf;
+		&:after { //Override the external link styling
+			content: '';
+		}
+	}
+
+	/* EMAIL LINKS */
+	a[href^="mailto:"] {
+		@extend .flat-icon-envelope;
+		&:after { //Override the external link styling
+			content: '';
+		}
+	}
+
+	/* PHONE LINKS */
+	a[href^="tel:"] {
+		@extend .flat-icon-phone;
+		&:after { //Override the external link styling
+			content: '';
+		}
+	}
+
+	/* RSS LINKS */
+	a[href$=".rss"],
+	a[href$="rss.xml"],
+	a[href*="/feed/"],
+	a[href*="/rss/"],
+	a[href*="/rss"],
+	a[href*="/changes"] {
+		@extend .flat-icon-feed;
+		&:after { //Override the external link styling
+			content: '';
+		}
+	}
+
+	/* IMAGE LINKS */
+	a[href$=".jpg"],
+	a[href$=".jpeg"],
+	a[href$=".png"],
+	a[href$=".gif"] {
+		@extend .flat-icon-images;
+		&:after { //Override the external link styling
+			content: '';
+		}
+	}
+	
+	/* VIDEO LINKS */
+	a[href*="vimeo.com"],
+	a[href*="youtube.com"],
+	a[href*="ustream.tv"],
+	a[href*="vevo.com"] {
+		@extend .flat-icon-youtube;
+		&:after { //Override the external link styling
+			content: '';
+		}
+	}
+	
+	/* PRINT BUTTON */
+	button[onclick*="window.print"] {
+		@extend .flat-icon-print;
+		&:after { //Override the external link styling
+			content: '';
+		}
+	}
+
+	/* SHARE LINKS */
+	a[href*="addthis.com"] {
+		@extend .flat-icon-export;
+		&:after { //Override the external link styling
+			content: '';
+		}
+	}
+
+	/* MAPS LINKS */
+	a[href*="maps.google"],
+	a[href*="wises.co.nz"],
+	a[href*="maps.yellow"],
+	a[href*="maps.yahoo"] {
+		@extend .flat-icon-location;
+		&:after { //Override the external link styling
+			content: '';
+		}
+	}
+
+	/* GOOGLE LINKS */
+	a[href*="www.google"] {
+		@extend .flat-icon-google;
+		&:after { //Override the external link styling
+			content: '';
+		}
+	}
+
+	/* FACEBOOK LINKS */
+	a[href*="facebook.com"] {
+		@extend .flat-icon-facebook;
+		&:after { //Override the external link styling
+			content: '';
+		}
+	}
+
+	/* TWITTER LINKS */
+	a[href*="twitter.com"] {
+		@extend .flat-icon-twitter;
+		&:after { //Override the external link styling
+			content: '';
+		}
+	}
+
+	/* GITHUB LINKS */
+	a[href*="github.com"] {
+		@extend .flat-icon-github;
+		&:after { //Override the external link styling
+			content: '';
+		}
+	}
+
+	/* INSTAGRAM LINKS */
+	a[href*="instagram.com"] {
+		@extend .flat-icon-instagram;
+		&:after { //Override the external link styling
+			content: '';
+		}
+	}
+
+	/* LINKEDIN LINKS */
+	a[href*="linkedin.com"] {
+		@extend .flat-icon-linkedin;
+		&:after { //Override the external link styling
+			content: '';
+		}
+	}
+
+	/* PINTEREST LINKS */
+	a[href*="pinterest.com"] {
+		@extend .flat-icon-pinterest;
+		&:after { //Override the external link styling
+			content: '';
+		}
 	}
 
 
@@ -259,8 +476,6 @@ THEME TYPOGRAPHY
 		}
 	}
 	
-	
-
 	.linkSet {
 		@extend .list-unstyled;
 		border-bottom: 1px solid $gray-lighter;
@@ -271,9 +486,18 @@ THEME TYPOGRAPHY
 		}
 	}
 	
+	// Gives full width - no margin element
+	.box-element {
+		margin: 0 $grid-x*-4;
+		background-color: $brand-secondary;
+	}
+
 	.heroUnit {
-		p {
-			font-size: ($font-size-base * 1.5);
+		@extend .box-element;
+		border-radius: 0;
+		padding: 20px;
+		h1{
+			margin-top: 0;
 		}
 	}
 }
