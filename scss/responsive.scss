@@ -26,6 +26,10 @@ THEME REPONSIVE STYLES
 
 // Phone and Tablets only
 @media (max-width: $screen-sm-max) {
+	.container {
+		padding-left: 0;
+		padding-right: 0;
+	}
 	.carousel {
 		.carousel-inner a {
 			text-decoration: none;
@@ -34,11 +38,25 @@ THEME REPONSIVE STYLES
 			position: static;
 			bottom: auto;
 			left: auto;
-			right: auto;
-			background-color: #333;
+			right: $grid-x*4;
+			background-color: $brand-primary;
+		}
+		.carousel-indicators {
+			.carousel-control.active {
+				background-color: #fff;
+				border-color: #fff;
+			}
 		}
 	}
-
+	//HEADER
+	header {
+		.brand {
+			a span {
+				display: inline;
+				padding-left: $grid-x*2;
+			}
+		}
+	}
 	//NAVIGATION
 	.navbar {
 		span.showChildren { 

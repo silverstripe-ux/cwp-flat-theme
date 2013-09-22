@@ -629,6 +629,11 @@ THEME REPONSIVE STYLES
   }
 }
 @media (max-width: 1099px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .carousel .carousel-inner a {
     text-decoration: none;
   }
@@ -636,8 +641,17 @@ THEME REPONSIVE STYLES
     position: static;
     bottom: auto;
     left: auto;
-    right: auto;
-    background-color: #333;
+    right: 20px;
+    background-color: #807129;
+  }
+  .carousel .carousel-indicators .carousel-control.active {
+    background-color: #fff;
+    border-color: #fff;
+  }
+
+  header .brand a span {
+    display: inline;
+    padding-left: 10px;
   }
 
   .navbar span.showChildren {
