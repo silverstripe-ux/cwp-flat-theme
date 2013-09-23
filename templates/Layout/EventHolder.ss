@@ -14,7 +14,7 @@
 			</nav>
 		</div>
 
-		<div class="sidebar-nav">
+		<div class="sidebar-form">
 			<h6>Filter by date range</h6>
 
 			<% with DateRangeForm %>

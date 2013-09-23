@@ -73,7 +73,8 @@
 }
 
 /* Side navigation */
-.sidebar-nav {
+.sidebar-nav,
+.sidebar-form {
 	@extend .box-element;
 	margin-bottom: $grid-y*4;
 	padding-top:    $grid-y*3;
