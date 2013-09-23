@@ -1,9 +1,8 @@
 (function($) {
 	$(document).ready(function() {
 
-		$('.navbar-collapse')
-			// .addClass('collapse')
-			// .addClass('collapsed')
+		$('.navbar-toggle')
+			.addClass('collapsed')
 			.on('hidden', function(){
 				$(this).addClass('collapsed');
 				$(this).siblings('button').attr('aria-expanded', 'false');

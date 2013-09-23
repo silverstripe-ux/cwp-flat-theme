@@ -17,9 +17,25 @@ $(function() {
 		}
 	}
 
+	function ShowSearchButton() {
+		if($(window).width() <= 1100){
+			$('.input-group-btn').hide();
+			$('.search-query').focus(function(){
+				$('.input-group-btn').show();
+			}).blur(function(){
+				$('.input-group-btn').hide();
+			});
+		} else {
+			$('.input-group-btn').show();
+		}
+	}
+
 	CaptionHeight();
+	ShowSearchButton();
+	
 	$(window).resize(function(){
 		CaptionHeight();
+		ShowSearchButton();
 	});
 });
 
