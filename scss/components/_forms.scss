@@ -137,7 +137,6 @@ select, input.text, input.file{
 	height:2.31em;
 	@include box-sizing(border-box);
 	&.date{
-		width:110px;
 		max-width:100%;
 		#IE7 &{
 			width:100px;
@@ -241,8 +240,12 @@ div.date{
 		padding-right: $grid-x*2;
 		margin: 0 $line-height-computed/2 $line-height-computed/2 0;
 		height:1.8em;
+		@include transition(all 200ms linear);
 		&.primary {
 			@extend .btn-primary;
+		}
+		&:hover {
+			@include transition(all 200ms linear);
 		}
 	}
 	#MemberLoginForm_LoginForm_action_dologin{
@@ -254,5 +257,12 @@ div.date{
 		a{
 			padding-left: $grid-x*6;
 		}
+	}
+}
+.btn,
+button {
+	@include transition(all 200ms linear);
+	&:hover {
+		@include transition(all 200ms linear);
 	}
 }

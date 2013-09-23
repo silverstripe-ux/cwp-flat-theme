@@ -1,1 +1,1 @@
-<input class="form-control"<% if RightTitle %>aria-describedby="$ID-extra"<% end_if %> $AttributesHTML >
+<input class="form-control $Type"<% if RightTitle %>aria-describedby="$ID-extra"<% end_if %> $AttributesHTML >

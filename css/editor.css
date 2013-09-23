@@ -3285,6 +3285,10 @@ table th[class*="col-"] {
   line-height: 1.428571429;
   font-weight: 300;
 }
+.typography a {
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
 .typography a:focus {
   outline: none;
 }
@@ -3293,6 +3297,8 @@ table th[class*="col-"] {
 }
 .typography a:hover {
   text-decoration: none;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
 }
 .typography .metaInfo {
   margin-bottom: 0.714285715;

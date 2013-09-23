@@ -5412,7 +5412,6 @@ select, input.text, input.file {
   box-sizing: border-box;
 }
 select.date, input.text.date, input.file.date {
-  width: 110px;
   max-width: 100%;
 }
 #IE7 select.date, #IE7 input.text.date, #IE7 input.file.date {
@@ -5525,6 +5524,12 @@ div.date input {
   padding-right: 10px;
   margin: 0 12.5px 12.5px 0;
   height: 1.8em;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+.Actions .action:hover {
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
 }
 .Actions #MemberLoginForm_LoginForm_action_dologin {
   float: left;
@@ -5535,6 +5540,17 @@ div.date input {
 }
 .Actions #ForgotPassword a {
   padding-left: 30px;
+}
+
+.btn, .Actions .action,
+button {
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+.btn:hover, .Actions .action:hover,
+button:hover {
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
 }
 
 /*
@@ -5549,6 +5565,12 @@ div.date input {
 .navbar .navbar-nav > li > a {
   text-transform: uppercase;
   padding: 10px 15px;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+.navbar .navbar-nav > li > a:hover {
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
 }
 .navbar .navbar-nav > li > a.has-children {
   padding-right: 30px;
@@ -5562,6 +5584,12 @@ div.date input {
 .navbar .navbar-nav > .dropdown > a .caret {
   border-top-color: #999999;
   border-bottom-color: #999999;
+  -webkit-transition: border-color 200ms linear;
+  transition: border-color 200ms linear;
+}
+.navbar .navbar-nav > .dropdown > a .caret:hover {
+  -webkit-transition: border-color 200ms linear;
+  transition: border-color 200ms linear;
 }
 .navbar .navbar-nav > .first a {
   padding-left: 0;
@@ -5583,9 +5611,13 @@ div.date input {
 }
 .navbar .navbar-toggle .icon-bar {
   background-color: #333333;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
 }
-.navbar .navbar-toggle:hover .icon-bar {
+.navbar .navbar-toggle.collapsed:hover .icon-bar {
   background-color: #807129;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
 }
 
 .nav > li > a {
@@ -5623,10 +5655,14 @@ div.date input {
   font-weight: 400;
   text-transform: uppercase;
   color: #333333;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
 }
 .sidebar-nav .nav > li > a:hover,
 .sidebar-form .nav > li > a:hover {
   color: #807129;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
 }
 .sidebar-nav .nav .nav li,
 .sidebar-form .nav .nav li {
@@ -5668,6 +5704,8 @@ div.date input {
 .sidebar-form .nav a:hover,
 .sidebar-form .nav a.active {
   background-color: #f2f2f2;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
 }
 .sidebar-nav .nav .active > a,
 .sidebar-form .nav .active > a {

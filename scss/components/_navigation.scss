@@ -12,6 +12,10 @@
 			> a {
 				text-transform: uppercase;
 				padding: $grid-y*2 $grid-x*3;
+				@include transition(all 200ms linear);
+				&:hover {
+					@include transition(all 200ms linear);
+				}
 				// Make toggle click area bigger for fingers
 				&.has-children {
 					padding-right: 30px;
@@ -29,6 +33,10 @@
 				.caret {
 					border-top-color: $gray-light;
 					border-bottom-color: $gray-light;
+					@include transition(border-color 200ms linear);
+					&:hover {
+						@include transition(border-color 200ms linear);
+					}
 				}
 			}
 		}
@@ -62,10 +70,12 @@
 	.navbar-toggle {
 		.icon-bar {
 			background-color: $navbar-default-link-color;
+			@include transition(all 200ms linear);
 		}
-		&:hover {
+		&.collapsed:hover {
 			.icon-bar {
 				background-color: $navbar-default-link-hover-color;
+				@include transition(all 200ms linear);
 			}
 		}
 	}
@@ -102,9 +112,11 @@
 	    		padding: $grid-y $grid-x*4;
 	    		font-weight: 400;
 	    		text-transform: uppercase;
-	    		color: $brand-tertiary; 
+	    		color: $brand-tertiary;
+	    		@include transition(all 200ms linear);
 	    		&:hover {
 	    			color: $brand-primary;
+	    			@include transition(all 200ms linear);
 	    		}
 	    	}
     	}
@@ -134,6 +146,7 @@
 	    }
 	    a:hover, a.active {
 	    	background-color: $navbar-default-link-active-bg;
+	    	@include transition(all 200ms linear);
 	    }
 	    .active > a {
 	    	color: $navbar-default-link-active-color;
