@@ -91,17 +91,20 @@ header {
 			border: none;
 			border-bottom: 1px solid $gray-light;
 			background-color: $brand-secondary;
+			@include transition(all 200ms linear);
 			@include noShadow;
 			&:focus {
+				@include transition(all 200ms linear);
 				background-color: #f9f9f9;
 				color: $gray;
+				border-color: $brand-secondary;
 			}
 		}
 		.input-group-btn {
 			.btn-default {
 				background-color: $brand-secondary;
 				border: none;
-				padding: $grid-y $grid-x*2;
+				padding: 3px $grid-x*2;
 				padding-right: 0;
 				i {
 					font-size:1.1em;

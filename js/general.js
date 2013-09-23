@@ -18,21 +18,24 @@ $(function() {
 	}
 
 	function ShowSearchButton() {
-		if($(window).width() <= 1100){
+		if($(window).width() < 1100){
 			$('.input-group-btn').hide();
 			$('.search-query').focus(function(){
-				$('.input-group-btn').show();
+				$('.input-group-btn').fadeIn(200);
 			}).blur(function(){
-				$('.input-group-btn').hide();
+				$('.input-group-btn').fadeOut(200);
 			});
 		} else {
-			$('.input-group-btn').show();
+			$('.input-group-btn').removeAttr('style');
+			$('.search-query').unbind('focus, blur');
 		}
 	}
 
-	CaptionHeight();
-	ShowSearchButton();
-	
+	$(document).ready(function(){
+		CaptionHeight();
+		ShowSearchButton();
+	});
+
 	$(window).resize(function(){
 		CaptionHeight();
 		ShowSearchButton();
