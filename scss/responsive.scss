@@ -50,6 +50,8 @@ THEME REPONSIVE STYLES
 	//HEADER
 	header {
 		.brand {
+			padding-bottom: $grid-y*8;
+			margin-top: $grid-y*8;
 			img {
 				margin-right: $grid-x*2;
 			}

@@ -646,6 +646,10 @@ THEME REPONSIVE STYLES
     border-color: #fff;
   }
 
+  header .brand {
+    padding-bottom: 40px;
+    margin-top: 40px;
+  }
   header .brand img {
     margin-right: 10px;
   }
