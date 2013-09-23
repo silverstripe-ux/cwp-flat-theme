@@ -1,5 +1,6 @@
 <div class="row">
-	<div id="main" class="col-16 resultsList" role="main">
+	<div id="main" class="col-md-16 resultsList" role="main">
+		<% include Breadcrumbs %>
 		<h1 class="searchQuery page-header">Search results</h1>
 
 		<% if Results %>
