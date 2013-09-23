@@ -5211,6 +5211,9 @@ td.visible-print {
 *	or modify it to change the look of your userforms
 */
 /*	General 	*/
+form fieldset {
+  margin-bottom: 20px;
+}
 form div.field {
   margin-bottom: 12.5px;
 }
@@ -5250,6 +5253,7 @@ select,
 /* Styling for messages */
 .message {
   padding: 5px;
+  padding-left: 0;
   margin-right: 5px;
   font-weight: normal;
   font-size: 18px;
@@ -5259,12 +5263,11 @@ select,
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  background: #fbfbfb;
-  border: 1px solid #eeeeee;
   color: #333333;
 }
 .message.error, label.required, .message.bad, .message.required {
   padding: 5px;
+  padding-left: 0;
   margin-right: 5px;
   font-weight: normal;
   font-size: 18px;
@@ -5274,12 +5277,11 @@ select,
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  background: #fcf6f6;
-  border: 1px solid #f6e3e6;
   color: #aa2b21;
 }
 .message.good, .message.success {
   padding: 5px;
+  padding-left: 0;
   margin-right: 5px;
   font-weight: normal;
   font-size: 18px;
@@ -5289,12 +5291,11 @@ select,
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  background: #dff0d8;
-  border: 1px solid #d6e9c6;
   color: #5f7c27;
 }
 .message.warning {
   padding: 5px;
+  padding-left: 0;
   margin-right: 5px;
   font-weight: normal;
   font-size: 18px;
@@ -5304,12 +5305,11 @@ select,
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  background: #fcf8e3;
-  border: 1px solid #fbeed5;
   color: #f0ad4e;
 }
 .message.info {
   padding: 5px;
+  padding-left: 0;
   margin-right: 5px;
   font-weight: normal;
   font-size: 18px;
@@ -5319,19 +5319,19 @@ select,
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  background: #d9edf7;
-  border: 1px solid #bce8f1;
   color: #5bc0de;
 }
 
 .required {
   color: #aa2b21;
   border-color: #aa2b21;
+  background-color: #fcf6f6;
 }
 .required:focus {
   border-color: #7f2019;
   -webkit-box-shadow: 0 0 6px #de5d53;
   box-shadow: 0 0 6px #de5d53;
+  background-color: #fff;
 }
 
 /* Label formatting */
@@ -5340,6 +5340,8 @@ label.left {
 }
 label.extra {
   font-style: italic;
+  font-weight: 300;
+  display: inline-block;
 }
 label.required {
   -webkit-box-sizing: border-box;
@@ -5350,6 +5352,7 @@ label.required {
   width: 100%;
   max-width: 490px;
   border-radius: 0;
+  background-color: transparent;
 }
 .textarea label.required {
   width: 100%;
@@ -5358,8 +5361,10 @@ label.required {
 
 span.extra {
   font-style: italic;
-  display: block;
+  font-weight: 300;
+  display: inline-block;
   margin-bottom: 12.5px;
+  margin-left: 10px;
 }
 
 .requiredField label .req-indicator, .requiredField legend .req-indicator {
@@ -5382,9 +5387,11 @@ legend {
   font-size: 18px;
   font-weight: normal;
   line-height: 25px;
-  font-weight: bold;
+  font-weight: 400;
   border-bottom: 0;
   margin-bottom: 5px;
+  width: auto;
+  display: inline-block;
 }
 
 /* Form fields formatting */
@@ -5417,35 +5424,66 @@ select.date, input.text.date, input.file.date {
   line-height: 20px;
 }
 
+input.file {
+  border: none;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  padding-left: 0;
+  line-height: 0.5;
+}
+
+.form-control:focus, textarea:focus, select:focus, input.text:focus, input.file:focus,
+textarea:focus,
+select:focus,
+input.text:focus,
+input.file:focus {
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
 /* Checkboxes and radio buttons */
-form ul.optionset {
+form .optionset {
   list-style: none;
   margin-left: 0;
 }
-form ul.optionset input.checkbox {
+form .optionset input.checkbox {
   display: inline;
   height: auto;
   margin-top: -3px;
 }
-form ul.optionset input.radio {
+form .optionset input.radio {
   display: inline;
   height: auto;
   margin-top: -3px;
 }
-form ul.optionset label {
-  font-weight: normal;
+form .optionset label {
+  font-weight: 400;
+}
+form .optionset span.extra,
+form .optionset label.extra {
+  margin-left: 0;
+}
+form .optionset ul.optionset {
+  margin-bottom: 0;
 }
 
 div.checkbox {
   padding-left: 0;
+  position: relative;
 }
 div.checkbox input.checkbox {
   min-height: 9px;
   height: auto;
-  margin: 3px 5px 0 0;
+  margin: 6px 5px 0 0;
+}
+div.checkbox input.checkbox.required {
+  margin-bottom: 30px;
 }
 div.checkbox label.required {
-  float: left;
+  position: absolute;
+  top: 0.8em;
   margin-top: 5px;
 }
 
@@ -5471,8 +5509,6 @@ div.date input {
 
 /* Submit button styling */
 .Actions {
-  border-top: 1px solid gainsboro;
-  padding: 0;
   margin-top: 20px;
 }
 .Actions:before, .Actions:after {
@@ -5580,10 +5616,6 @@ div.date input {
 .sidebar-form .all-tags {
   margin: 12px 0;
   padding: 0 20px;
-}
-.sidebar-nav .Actions,
-.sidebar-form .Actions {
-  border-top: none;
 }
 .sidebar-nav .nav > li > a,
 .sidebar-form .nav > li > a {

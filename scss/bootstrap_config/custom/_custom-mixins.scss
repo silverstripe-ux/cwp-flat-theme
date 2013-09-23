@@ -327,16 +327,19 @@
 }
 
 @mixin formValidation($textColor: #555, $borderColor: #ccc, $backgroundColor: #f5f5f5){
-  color: $textColor;
+    color: $textColor;
     border-color: $borderColor;
+    background-color: $backgroundColor;
     &:focus {
       border-color: darken($borderColor, 10%);
       @include box-shadow(0 0 6px lighten($borderColor, 20%));
+      background-color: #fff;
     }
 }
 
 @mixin message($type){
   padding:5px;
+  padding-left: 0;
   margin-right:5px;
   font-weight:normal;
   font-size:$font-size-base;
@@ -345,24 +348,14 @@
   clear:both;
   @include border-radius(3px);
   @if $type == 'error' {
-    background:$errorBackground;
-    border:1px solid $errorBorder;
     color: $errorText;
   }@else if $type == 'warning' {
-    background:$warningBackground;
-    border:1px solid $warningBorder;
     color: $warningText;
   }@else if $type == 'success' {
-    background:$successBackground;
-    border:1px solid $successBorder;
     color: $successText;
   }@else if $type == 'info' { 
-    background:$infoBackground;
-    border:1px solid $infoBorder;
     color: $infoText;
   }@else{
-    background:lighten($gray-lighter,5%);
-    border:1px solid $gray-lighter;
     color: $gray-dark;
   }
 }
