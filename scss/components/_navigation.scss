@@ -4,6 +4,9 @@
 
 .navbar {
 	margin-top: 31px;
+	.navbar-collapse.in {
+		overflow-y: visible;
+	}
 	.navbar-nav {
 		> li {
 			> a {

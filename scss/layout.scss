@@ -87,13 +87,14 @@ header {
 		margin-right: $grid-x*-4;
 		.search-query {
 			@extend small;
+			color: $gray-light;
 			border: none;
 			border-bottom: 1px solid $gray-light;
 			background-color: $brand-secondary;
 			@include noShadow;
 			&:focus {
 				background-color: #f9f9f9;
-				color: $gray-lighter;
+				color: $gray;
 			}
 		}
 		.input-group-btn {

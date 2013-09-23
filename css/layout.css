@@ -1513,16 +1513,16 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 }
 
 .form-control:-moz-placeholder, textarea:-moz-placeholder, select:-moz-placeholder, input.text:-moz-placeholder, input.file:-moz-placeholder {
-  color: #999999;
+  color: #555555;
 }
 .form-control::-moz-placeholder, textarea::-moz-placeholder, select::-moz-placeholder, input.text::-moz-placeholder, input.file::-moz-placeholder {
-  color: #999999;
+  color: #555555;
 }
 .form-control:-ms-input-placeholder, textarea:-ms-input-placeholder, select:-ms-input-placeholder, input.text:-ms-input-placeholder, input.file:-ms-input-placeholder {
-  color: #999999;
+  color: #555555;
 }
 .form-control::-webkit-input-placeholder, textarea::-webkit-input-placeholder, select::-webkit-input-placeholder, input.text::-webkit-input-placeholder, input.file::-webkit-input-placeholder {
-  color: #999999;
+  color: #555555;
 }
 
 .form-control, textarea, select, input.text, input.file {
@@ -5507,6 +5507,9 @@ div.date input {
 .navbar {
   margin-top: 31px;
 }
+.navbar .navbar-collapse.in {
+  overflow-y: visible;
+}
 .navbar .navbar-nav > li > a {
   text-transform: uppercase;
   padding: 10px 15px;
@@ -6113,6 +6116,7 @@ header .search-form {
   margin-right: -20px;
 }
 header .search-form .search-query {
+  color: #999999;
   border: none;
   border-bottom: 1px solid #999999;
   background-color: #f2f2f2;
@@ -6122,7 +6126,7 @@ header .search-form .search-query {
 }
 header .search-form .search-query:focus {
   background-color: #f9f9f9;
-  color: #eeeeee;
+  color: #555555;
 }
 header .search-form .input-group-btn .btn-default, header .search-form .input-group-btn .Actions .action, .Actions header .search-form .input-group-btn .action {
   background-color: #f2f2f2;
