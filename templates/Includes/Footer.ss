@@ -33,10 +33,6 @@
 				</a>
 			<% end_if %>
 		</div>
-
-		<div class="footer-copyright">
-			<p><small>$SiteConfig.Title &copy; $CurrentDatetime.Format(Y)</small></p>
-		</div>
 	</div>
 
 	<div class="col-md-5">
@@ -49,6 +45,9 @@
 					<a href="http://www.facebook.com/$SiteConfig.FacebookURL" title="Join us on Facebook" target="_blank">Join us on Facebook</a>
 				<% end_if %>
 			</aside>
+			<div class="footer-copyright">
+				<p><small>$SiteConfig.Title &copy; $CurrentDatetime.Format(Y)</small></p>
+			</div>
 		<% end_if %>
 	</div>
 </footer>
