@@ -6280,9 +6280,9 @@ header .search-form .input-group-btn .btn-default:hover i, header .search-form .
   margin-left: 18px;
   display: inline-block;
 }
-.layout p.printShare a #ie7,
-.layout p.printShare a #ie8, .layout p.printShare button #ie7,
-.layout p.printShare button #ie8 {
+.layout p.printShare a #IE7,
+.layout p.printShare a #IE8, .layout p.printShare button #IE7,
+.layout p.printShare button #IE8 {
   display: inline;
   zoom: 1;
 }
