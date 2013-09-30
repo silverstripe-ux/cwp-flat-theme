@@ -10,7 +10,7 @@
   margin: 0.25em;
 }
 
-.row-fluid {
+.row {
   width: 100%;
 }
 
@@ -19,120 +19,120 @@
   margin-left: 0;
 }
 
-[class*="span"],
-.row-fluid [class*="span"] {
+[class*="col-md"],
+.row [class*="col-md"] {
   float: none;
   display: block;
   width: auto;
   margin-left: 0;
 }
 
-#IE6 .span16, #IE6 .row-fluid .span16 {
+#IE6 .col-md-16, #IE6 .row .col-md-16 {
   float: none;
   display: block;
   width: auto;
   margin-left: 0;
 }
 
-#IE6 .span15, #IE6 .row-fluid .span15 {
+#IE6 .col-md-15, #IE6 .row .col-md-15 {
   float: none;
   display: block;
   width: auto;
   margin-left: 0;
 }
 
-#IE6 .span14, #IE6 .row-fluid .span14 {
+#IE6 .col-md-14, #IE6 .row .col-md-14 {
   float: none;
   display: block;
   width: auto;
   margin-left: 0;
 }
 
-#IE6 .span13, #IE6 .row-fluid .span13 {
+#IE6 .col-md-13, #IE6 .row .col-md-13 {
   float: none;
   display: block;
   width: auto;
   margin-left: 0;
 }
 
-#IE6 .span12, #IE6 .row-fluid .span12 {
+#IE6 .col-md-12, #IE6 .row .col-md-12 {
   float: none;
   display: block;
   width: auto;
   margin-left: 0;
 }
 
-#IE6 .span11, #IE6 .row-fluid .span11 {
+#IE6 .col-md-11, #IE6 .row .col-md-11 {
   float: none;
   display: block;
   width: auto;
   margin-left: 0;
 }
 
-#IE6 .span10, #IE6 .row-fluid .span10 {
+#IE6 .col-md-10, #IE6 .row .col-md-10 {
   float: none;
   display: block;
   width: auto;
   margin-left: 0;
 }
 
-#IE6 .span9, #IE6 .row-fluid .span9 {
+#IE6 .col-md-9, #IE6 .row .col-md-9 {
   float: none;
   display: block;
   width: auto;
   margin-left: 0;
 }
 
-#IE6 .span8, #IE6 .row-fluid .span8 {
+#IE6 .col-md-8, #IE6 .row .col-md-8 {
   float: none;
   display: block;
   width: auto;
   margin-left: 0;
 }
 
-#IE6 .span7, #IE6 .row-fluid .span7 {
+#IE6 .col-md-7, #IE6 .row .col-md-7 {
   float: none;
   display: block;
   width: auto;
   margin-left: 0;
 }
 
-#IE6 .span6, #IE6 .row-fluid .span6 {
+#IE6 .col-md-6, #IE6 .row .col-md-6 {
   float: none;
   display: block;
   width: auto;
   margin-left: 0;
 }
 
-#IE6 .span5, #IE6 .row-fluid .span5 {
+#IE6 .col-md-5, #IE6 .row .col-md-5 {
   float: none;
   display: block;
   width: auto;
   margin-left: 0;
 }
 
-#IE6 .span4, #IE6 .row-fluid .span4 {
+#IE6 .col-md-4, #IE6 .row .col-md-4 {
   float: none;
   display: block;
   width: auto;
   margin-left: 0;
 }
 
-#IE6 .span3, #IE6 .row-fluid .span3 {
+#IE6 .col-md-3, #IE6 .row .col-md-3 {
   float: none;
   display: block;
   width: auto;
   margin-left: 0;
 }
 
-#IE6 .span2, #IE6 .row-fluid .span2 {
+#IE6 .col-md-2, #IE6 .row .col-md-2 {
   float: none;
   display: block;
   width: auto;
   margin-left: 0;
 }
 
-#IE6 .span1, #IE6 .row-fluid .span1 {
+#IE6 .col-md-1, #IE6 .row .col-md-1 {
   float: none;
   display: block;
   width: auto;

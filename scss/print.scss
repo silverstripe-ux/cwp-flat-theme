@@ -15,7 +15,7 @@
 	width: auto; margin: 0.25em;
 }
 // Fluid rows
-.row-fluid {
+.row {
 	width: 100%;
 }
 // Undo negative margin on rows and thumbnails
@@ -26,8 +26,8 @@
 
 
 // Make all grid-sized elements block level again
-[class*="span"],
-.row-fluid [class*="span"] {
+[class*="col-md"],
+.row [class*="col-md"] {
 	float: none;
 	display: block;
 	width: auto;
@@ -37,7 +37,7 @@
 // IE6 cant deal with class*= matchers, so we need to loop through & set too
 $i: $grid-columns;
 @while $i > 0 {
-	#IE6 .span#{$i}, #IE6 .row-fluid .span#{$i} {
+	#IE6 .col-md-#{$i}, #IE6 .row .col-md-#{$i} {
 		float: none;
 		display: block;
 		width: auto;
