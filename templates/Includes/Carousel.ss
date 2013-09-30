@@ -15,15 +15,15 @@
 					<div class="carousel-controls">
 						<a class="left carousel-control" href="#myCarousel" data-slide="prev" tabindex="0" role="button" title="Previous">
 							<span class="glyphicon glyphicon-chevron-left"></span>
-							<span class="nonvisual-indicator">Previous</span>
+							<span class="sr-only">Previous</span>
 						</a>
 						<a href="#myCarousel" role="button" class="pause" tabindex="0" title="Pause/Play">
 							<span class="glyphicon glyphicon-pause"></span>
-							<span class="nonvisual-indicator">Play/Pause</span>
+							<span class="sr-only">Play/Pause</span>
 						</a>
 						<a class="right carousel-control" href="#myCarousel" data-slide="next" tabindex="0" role="button" title="Next">
 							<span class="glyphicon glyphicon-chevron-right"></span>
-							<span class="nonvisual-indicator">Next</span>
+							<span class="sr-only">Next</span>
 						</a>
 					</div>
 				</div>

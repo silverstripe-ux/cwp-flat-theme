@@ -1,5 +1,5 @@
 <footer class="container typography" role="contentinfo">
-	<h2 class="nonvisual-indicator">Footer</h2>
+	<h2 class="sr-only">Footer</h2>
 	<div class="col-md-11">
 		<% if Footer %>
 			<nav role="navigation">

@@ -119,14 +119,6 @@ header {
 
 /************************ MISC ****************************/
 
-.nonvisual-indicator { // Content oftenly used by people using screenreaders 
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px; width: 1px;
-  margin: -1px; padding: 0; border: 0;
-}
-
 // Gives full width - no margin element
 .box-element {
 	margin: 0 $grid-x*-4;
@@ -535,16 +527,10 @@ footer {
  * Accessibility Skiplinks for screen readers, allow users to bypass 
  * content recurring on every page to access the menu 
  * or the content directly additionally for regular users by using tab
+ * - skiplinks are hidden with the Bootstrap .sr-only class.
  */
 
 .skipLinks a { 
-	padding: $grid-y $grid-x*2;
-	position:absolute;
-	left:-10000px;
-	top:auto;
-	width:1px;
-	height:1px;
-	overflow:hidden;
 	
 	&:focus, &:active { 
 		display: inline-block; 

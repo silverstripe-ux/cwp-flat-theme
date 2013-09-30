@@ -58,7 +58,7 @@
 	
 		<% if AvailableMonths %>
 			<div class="month-filter">
-				<h2 class="nonvisual-indicator">Month filter:</h2>
+				<h2 class="sr-only">Month filter:</h2>
 				<% loop AvailableMonths %>
 					<h6 class="year">$YearName:</h6>
 					<ol class="nav nav-pills unstyled months">

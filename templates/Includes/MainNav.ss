@@ -14,7 +14,7 @@
 	<!-- Place everything within .nav-collapse to hide it until above 768px -->
 	<div id="top-navigation" class="navbar-collapse collapse navbar-responsive-collapse">
 		<nav role="navigation">
-			<h2 class="nonvisual-indicator">Main navigation</h2>
+			<h2 class="sr-only">Main navigation</h2>
 			<ul class="nav navbar-nav">
 				<% loop Menu(1) %>
 					<li class="$LinkingMode <% if $LinkingMode = current %>active <% end_if %><% if Children %>dropdown <% end_if %><% if First %>first<% end_if %>">

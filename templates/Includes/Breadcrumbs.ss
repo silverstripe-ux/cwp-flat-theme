@@ -1,4 +1,4 @@
 <div>
-	<h2 class="nonvisual-indicator">Breadcrumbs</h2>
+	<h2 class="sr-only">Breadcrumbs</h2>
 	$Breadcrumbs
 </div>

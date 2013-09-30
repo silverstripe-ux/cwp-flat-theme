@@ -2,7 +2,7 @@
 	<div id="main" role="main">
 		<div class="col-md-5">
 			<div class="sidebar-nav update-information">
-				<h2 class="nonvisual-indicator">Event information</h2>
+				<h2 class="sr-only">Event information</h2>
 				<dl>
 					<dt>Date &amp; time</dt>
 					<dd><time datetime="$Date">$Date.Format(d/m/Y)<% if $StartTime %> $StartTime.Nice<% if $EndTime %> - $EndTime.Nice<% end_if %><% end_if %></time></dd>

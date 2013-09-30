@@ -1,6 +1,6 @@
 <div class="sidebar-nav">
 	<nav id="pageNav" role="navigation">
-		<h2 class="nonvisual-indicator">Secondary Navigation</h2>
+		<h2 class="sr-only">Secondary Navigation</h2>
 		<ul class="nav nav-stacked">
 			<% loop Menu(2) %>
 

@@ -2,7 +2,7 @@
 	<div id="main" role="main">
 		<div class="col-md-5">
 			<div class="sidebar-nav update-information">
-				<h2 class="nonvisual-indicator">News item information</h2>
+				<h2 class="sr-only">News item information</h2>
 				<dl>
 					<dt>Date</dt>
 					<dd><time datetime="$Date">$Date.Nice</time></dd>

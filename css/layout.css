@@ -6217,17 +6217,6 @@ header .search-form .input-group-btn .btn-default:hover i, header .search-form .
 }
 
 /************************ MISC ****************************/
-.nonvisual-indicator {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-}
-
 .box-element, .sidebar-nav,
 .sidebar-form {
   margin: 0 -20px;
@@ -7027,16 +7016,8 @@ footer .footer-copyright p {
  * Accessibility Skiplinks for screen readers, allow users to bypass 
  * content recurring on every page to access the menu 
  * or the content directly additionally for regular users by using tab
+ * - skiplinks are hidden with the Bootstrap .sr-only class.
  */
-.skipLinks a {
-  padding: 5px 10px;
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
 .skipLinks a:focus, .skipLinks a:active {
   display: inline-block;
   position: static;
